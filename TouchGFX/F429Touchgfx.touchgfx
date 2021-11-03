@@ -1,0 +1,81 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "screen",
+        "Components": [
+          {
+            "Type": "Button",
+            "Name": "button1",
+            "X": 315,
+            "Y": 210,
+            "Width": 170,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "X": 336,
+            "Y": 98,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Style": "Style4"
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "MyApplication",
+    "Resolution": {
+      "Width": 800,
+      "Height": 480
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "screen",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 800,
+        "Height": 480
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project --project-file=../F429Touchgfx.ioc --platform=m4",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F4"
+  },
+  "Version": "4.18.0"
+}
