@@ -20,10 +20,17 @@
     <ClCompile Include="..\..\gui\src\common\FrontendApplication.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp"/>
     <ClCompile Include="..\..\gui\src\model\Model.cpp"/>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen_screen\screenViewBase.cpp"/>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp"/>
+    <ClCompile Include="..\..\gui\src\demo_screen\DemoPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\demo_screen\DemoView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\demo_screen\DemoViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\model\FakeHardware.cpp"/>
+    <ClCompile Include="..\..\gui\src\introduction_screen\IntroductionPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\introduction_screen\IntroductionView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\introduction_screen\IntroductionViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\LabelBox.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\LabelBoxBase.cpp"/>
+    <ClCompile Include="..\..\gui\include\gui\model\ModelListener.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -172,11 +179,17 @@
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\MJPEGDecoder.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\Model.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_screen\screenViewBase.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\demo_screen\DemoPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\demo_screen\DemoView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\demo_screen\DemoViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\model\FakeHardware.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\introduction_screen\IntroductionPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\introduction_screen\IntroductionView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\introduction_screen\IntroductionViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\LabelBox.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\LabelBoxBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

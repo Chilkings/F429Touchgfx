@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.18.0">
-  <Texts />
+  <Texts>
+    <Text Id="__SingleUse_XYOC" TypographyId="Output" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_D3RO" TypographyId="Output" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">0</Translation>
+    </Text>
+    <Text Id="__SingleUse_04Y0" TypographyId="Main" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">input</Translation>
+    </Text>
+    <Text Id="__SingleUse_0R1U" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">output + 10</Translation>
+    </Text>
+    <Text Id="ui" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">UI</Translation>
+    </Text>
+    <Text Id="system" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">System</Translation>
+    </Text>
+    <Text Id="view" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">View</Translation>
+    </Text>
+    <Text Id="presenter" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Presenter</Translation>
+    </Text>
+    <Text Id="model" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Model</Translation>
+    </Text>
+    <Text Id="introduction" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Understanding MVP&#10;&#10;This application will help you understand&#10;the model, view, presenter structure &#10;of TouchGFX applications&#10;&#10;Move left or right by using the arrows</Translation>
+    </Text>
+    <Text Id="understanding" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Understanding MVP</Translation>
+    </Text>
+    <Text Id="input" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Example&#10;Input from system</Translation>
+    </Text>
+    <Text Id="output" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Example&#10;Output to system</Translation>
+    </Text>
+    <Text Id="system_input_code" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">int control_read_current_temperature() {&#10;  //...&#10;}</Translation>
+    </Text>
+    <Text Id="system_output_code" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">void control_set_room_temperature() {&#10;  //...&#10;}</Translation>
+    </Text>
+    <Text Id="view_description" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Views describe the visual appearance of your ui.&#10;Views consist of widgets - boxes, images, buttons, ...&#10;Views have handlers for reacting to user events</Translation>
+    </Text>
+    <Text Id="view_input_code" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">void TemperatureView::updateCurrent(int t) {&#10;  temperatureWidget.setValue(t);&#10;}</Translation>
+    </Text>
+    <Text Id="view_output_code" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">void TemperatureView::buttonClicked() {&#10;  presenter-&gt;buttonClicked();&#10;}</Translation>
+    </Text>
+    <Text Id="presenter_input_code" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">void TemperaturePresenter::updateCurrent(int t) {&#10;  view.updateCurrent(t);&#10;}</Translation>
+    </Text>
+    <Text Id="presenter_output_code" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">void TemperaturePresenter::buttonClicked() {&#10;  model-&gt;requestAdjustTemperature();&#10;}&#10;</Translation>
+    </Text>
+    <Text Id="model_input_code" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">void Model::tick() {&#10;  temperature = control_read_current_temperature();&#10;  modelListener-&gt;updateCurrent(temperature);&#10;}</Translation>
+    </Text>
+    <Text Id="model_output_code" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">void Model::requestAdjustTemperature() {&#10;  control_set_room_temperature();&#10;}&#10;</Translation>
+    </Text>
+    <Text Id="mvp_in_short" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">MVP connects your UI to your system</Translation>
+    </Text>
+    <Text Id="presenter_description" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">Presenters mediate between the views and the model&#10;Presenters contain the behaviour of the ui </Translation>
+    </Text>
+    <Text Id="model_description" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">The model holds the state of the ui&#10;The model is the point of integration with your system&#10;You write the code for communicating with your system</Translation>
+    </Text>
+    <Text Id="system_description" TypographyId="Code" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">The system is everything outside TouchGFX&#10;The system has methods for controlling your hardware&#10;The system can be implemented in C or C++</Translation>
+    </Text>
+    <Text Id="demo" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">Demo</Translation>
+    </Text>
+    <Text Id="__SingleUse_GC5I" TypographyId="Main" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">New Text</Translation>
+    </Text>
+  </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" FallbackCharacter="?" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" FallbackCharacter="?" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" FallbackCharacter="?" />
+    <Typography Id="Output" Font="SourceSansPro-Bold.ttf" Size="128" Bpp="4" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="Main" Font="SourceSansPro-Bold.ttf" Size="30" Bpp="4" FallbackCharacter="?" />
+    <Typography Id="Code" Font="SourceCodePro-Regular.ttf" Size="16" Bpp="4" FallbackCharacter="?" />
+    <Typography Id="Description" Font="SourceCodePro-Regular.ttf" Size="10" Bpp="4" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

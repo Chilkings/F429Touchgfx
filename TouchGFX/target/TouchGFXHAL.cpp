@@ -18,7 +18,11 @@
 
 /* USER CODE BEGIN TouchGFXHAL.cpp */
 
-#include "stm32f4xx.h"
+extern "C"
+{
+	#include "stm32f4xx.h"
+	#include "w25qxx.h"		
+}
 
 using namespace touchgfx;
 
@@ -84,7 +88,27 @@ void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect& rect)
 
 bool TouchGFXHAL::blockCopy(void* RESTRICT dest, const void* RESTRICT src, uint32_t numBytes)
 {
-    return TouchGFXGeneratedHAL::blockCopy(dest, src, numBytes);
+    uint32_t p;
+    p = (uint32_t)src;
+    if ((uint32_t)src >= 0x90000000 && (uint32_t)src < 0x91000000)
+    {
+        W25QXX_Read((uint8_t *)dest, ((uint32_t)src - 0x90000000), numBytes & 0xffff);
+        if (numBytes >> 16)
+        {
+            dest = (uint8_t *)dest + (numBytes & 0xffff);
+            p = (uint32_t)src - 0x90000000 + (numBytes & 0xffff);
+            for (uint32_t i = 0; i < (numBytes >> 16); i++)
+            {
+                W25QXX_Read((uint8_t *)dest + (i * 0xffff),  p+ (i * 0xffff), 0xffff); //¶ÁÈ¡SPI_FLASHÄÚÈÝ
+            }
+        }
+
+        return true;
+    }
+    else
+    {
+        return TouchGFXGeneratedHAL::blockCopy(dest, src, numBytes);
+    }
 }
 
 /**

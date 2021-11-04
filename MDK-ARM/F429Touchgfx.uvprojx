@@ -138,7 +138,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2V8M.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -361,7 +361,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>1</umfTarg>
+            <umfTarg>0</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -370,7 +370,7 @@
             <TextAddressRange></TextAddressRange>
             <DataAddressRange></DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>F429Touchgfx\F429Touchgfx.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -528,6 +528,11 @@
               <FileName>stm32f4xx_hal_timebase_tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32f4xx_hal_timebase_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>w25qxx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\w25qxx.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -725,9 +730,39 @@
           <GroupName>gui</GroupName>
           <Files>
             <File>
+              <FileName>DemoPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/demo_screen/demopresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>DemoView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/demo_screen/demoview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>FakeHardware.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/model/fakehardware.cpp</FilePath>
+            </File>
+            <File>
               <FileName>FrontendApplication.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/gui/src/common/frontendapplication.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>IntroductionPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/introduction_screen/introductionpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>IntroductionView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/introduction_screen/introductionview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>LabelBox.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/containers/labelbox.cpp</FilePath>
             </File>
             <File>
               <FileName>Model.cpp</FileName>
@@ -735,14 +770,9 @@
               <FilePath>../touchgfx/gui/src/model/model.cpp</FilePath>
             </File>
             <File>
-              <FileName>screenPresenter.cpp</FileName>
+              <FileName>ModelListener.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/screen_screen/screenpresenter.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>screenView.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/screen_screen/screenview.cpp</FilePath>
+              <FilePath>../touchgfx/gui/include/gui/model/modellistener.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -765,19 +795,29 @@
               <FilePath>../touchgfx/generated/fonts/src/cachedfont.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_verdana_10_4bpp_0.cpp</FileName>
+              <FileName>DemoViewBase.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_verdana_10_4bpp_0.cpp</FilePath>
+              <FilePath>../touchgfx/generated/gui_generated/src/demo_screen/demoviewbase.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_verdana_20_4bpp_0.cpp</FileName>
+              <FileName>Font_SourceCodePro_Regular_10_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_verdana_20_4bpp_0.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_sourcecodepro_regular_10_4bpp_0.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_verdana_40_4bpp_0.cpp</FileName>
+              <FileName>Font_SourceCodePro_Regular_16_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_verdana_40_4bpp_0.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_sourcecodepro_regular_16_4bpp_0.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_SourceSansPro_Bold_128_4bpp_0.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_sourcesanspro_bold_128_4bpp_0.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_SourceSansPro_Bold_30_4bpp_0.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_sourcesanspro_bold_30_4bpp_0.cpp</FilePath>
             </File>
             <File>
               <FileName>FontCache.cpp</FileName>
@@ -795,59 +835,84 @@
               <FilePath>../touchgfx/generated/fonts/src/generatedfont.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_Blue_Buttons_Round_Edge_small.cpp</FileName>
+              <FileName>image_arrow_left.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_buttons_round_edge_small.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_arrow_left.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_Blue_Buttons_Round_Edge_small_pressed.cpp</FileName>
+              <FileName>image_arrow_right.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_buttons_round_edge_small_pressed.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_arrow_right.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_Blue_Togglebars_Toggle_round_large_button_OFF.cpp</FileName>
+              <FileName>image_dark_button.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_togglebars_toggle_round_large_button_off.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_dark_button.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_Blue_Togglebars_Toggle_round_large_button_ON.cpp</FileName>
+              <FileName>image_dark_button_pressed.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_togglebars_toggle_round_large_button_on.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_dark_button_pressed.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_verdana_10_4bpp.cpp</FileName>
+              <FileName>image_logo.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_10_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_logo.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_verdana_20_4bpp.cpp</FileName>
+              <FileName>IntroductionViewBase.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_20_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/gui_generated/src/introduction_screen/introductionviewbase.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_verdana_40_4bpp.cpp</FileName>
+              <FileName>Kerning_SourceCodePro_Regular_10_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_40_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_sourcecodepro_regular_10_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>screenViewBase.cpp</FileName>
+              <FileName>Kerning_SourceCodePro_Regular_16_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/gui_generated/src/screen_screen/screenviewbase.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_sourcecodepro_regular_16_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_verdana_10_4bpp.cpp</FileName>
+              <FileName>Kerning_SourceSansPro_Bold_128_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_verdana_10_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_sourcesanspro_bold_128_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_verdana_20_4bpp.cpp</FileName>
+              <FileName>Kerning_SourceSansPro_Bold_30_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_verdana_20_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_sourcesanspro_bold_30_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_verdana_40_4bpp.cpp</FileName>
+              <FileName>LabelBoxBase.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_verdana_40_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/gui_generated/src/containers/labelboxbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>LanguageGb.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/texts/src/languagegb.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_SourceCodePro_Regular_10_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_sourcecodepro_regular_10_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_SourceCodePro_Regular_16_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_sourcecodepro_regular_16_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_SourceSansPro_Bold_128_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_sourcesanspro_bold_128_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_SourceSansPro_Bold_30_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_sourcesanspro_bold_30_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Texts.cpp</FileName>

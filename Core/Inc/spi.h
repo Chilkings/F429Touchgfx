@@ -40,7 +40,8 @@ extern SPI_HandleTypeDef hspi5;
 void MX_SPI5_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+unsigned char SPI5_ReadWriteByte(unsigned char TxData);
+void SPI5_SetSpeed(unsigned char SPI_BaudRatePrescaler);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
