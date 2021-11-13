@@ -9,15 +9,11 @@
 #include <mvp/MVPHeap.hpp>
 
 #include <touchgfx/transitions/NoTransition.hpp>
-#include <touchgfx/transitions/SlideTransition.hpp>
-
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/introduction_screen/IntroductionView.hpp>
-#include <gui/introduction_screen/IntroductionPresenter.hpp>
-#include <gui/demo_screen/DemoView.hpp>
-#include <gui/demo_screen/DemoPresenter.hpp>
+#include <gui/main_screen/mainView.hpp>
+#include <gui/main_screen/mainPresenter.hpp>
 
 
 /**
@@ -40,9 +36,8 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< IntroductionView,
-            touchgfx::meta::TypeList< DemoView,
-            touchgfx::meta::Nil >
+    typedef touchgfx::meta::TypeList< mainView,
+            touchgfx::meta::Nil
             > GeneratedViewTypes;
 
     /**
@@ -54,9 +49,8 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< IntroductionPresenter,
-            touchgfx::meta::TypeList< DemoPresenter,
-            touchgfx::meta::Nil >
+    typedef touchgfx::meta::TypeList< mainPresenter,
+            touchgfx::meta::Nil
             > GeneratedPresenterTypes;
 
     /**
@@ -69,9 +63,7 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
-            touchgfx::meta::TypeList< SlideTransition<WEST>,
-            touchgfx::meta::TypeList< SlideTransition<EAST>,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::Nil
             > GeneratedTransitionTypes;
 
     /**
@@ -81,7 +73,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoIntroductionScreenNoTransition();
+        app.gotomainScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

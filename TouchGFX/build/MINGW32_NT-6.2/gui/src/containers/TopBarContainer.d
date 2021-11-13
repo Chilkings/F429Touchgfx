@@ -1,7 +1,7 @@
-build/MINGW32_NT-6.2/gui/src/containers/TopBarContainer.o: \
- gui/src/containers/TopBarContainer.cpp \
- gui/include/gui/containers/TopBarContainer.hpp \
- generated/gui_generated/include/gui_generated/containers/TopBarContainerBase.hpp \
+build/MINGW32_NT-6.2/gui/src/containers/topbarContainer.o: \
+ gui/src/containers/topbarContainer.cpp \
+ gui/include/gui/containers/topbarContainer.hpp \
+ generated/gui_generated/include/gui_generated/containers/topbarContainerBase.hpp \
  gui/include/gui/common/FrontendApplication.hpp \
  generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -46,11 +46,14 @@ build/MINGW32_NT-6.2/gui/src/containers/TopBarContainer.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
+ gui/include/gui/common/constans.hpp
 
-gui/include/gui/containers/TopBarContainer.hpp:
+gui/include/gui/containers/topbarContainer.hpp:
 
-generated/gui_generated/include/gui_generated/containers/TopBarContainerBase.hpp:
+generated/gui_generated/include/gui_generated/containers/topbarContainerBase.hpp:
 
 gui/include/gui/common/FrontendApplication.hpp:
 
@@ -141,3 +144,9 @@ gui/include/gui/model/Model.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
+
+gui/include/gui/common/constans.hpp:

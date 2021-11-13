@@ -9,32 +9,28 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE;
 
 TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
-    1440, // T___SingleUse_XYOC
-    1419, // T___SingleUse_D3RO
-    1455, // T___SingleUse_04Y0
-    1409, // T___SingleUse_0R1U
-    1471, // T_ui
-    1442, // T_system
-    1466, // T_view
-    1421, // T_presenter
-    1449, // T_model
-    0, // T_introduction
-    1391, // T_understanding
-    1340, // T_input
-    1366, // T_output
-    1205, // T_system_input_code
-    1256, // T_system_output_code
-    164, // T_view_description
-    898, // T_view_input_code
-    1133, // T_view_output_code
-    1056, // T_presenter_input_code
-    813, // T_presenter_output_code
-    598, // T_model_input_code
-    978, // T_model_output_code
-    1304, // T_mvp_in_short
-    718, // T_presenter_description
-    316, // T_model_description
-    461, // T_system_description
-    1461, // T_demo
-    1431 // T___SingleUse_GC5I
+    197, // T_CoverTransition
+    219, // T_FlipTransition
+    203, // T_SlideTransition
+    169, // T_CurtainsTransition
+    189, // T_RolloutTransition
+    59, // T_LargeCoverTransition
+    109, // T_LargeFlipTransition
+    76, // T_LargeSlideTransition
+    0, // T_LargeCurtainsTransition
+    40, // T_LargeRolloutTransition
+    224, // T___SingleUse_M3UE
+    166, // T___SingleUse_KQID
+    235, // T___SingleUse_TEKI
+    214, // T___SingleUse_KILU
+    187, // T___SingleUse_AD0A
+    234, // T___SingleUse_YGS1
+    141, // T_NormalSpeed
+    154, // T_SlowMotion
+    93, // T_LargeCubeTransition
+    209, // T_CubeTransition
+    125, // T_LargeSpinTransition
+    20, // T_LargeSpinOutTransition
+    229, // T_SpinTransition
+    178 // T_SpinOutTransition
 };

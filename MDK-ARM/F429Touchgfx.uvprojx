@@ -53,8 +53,8 @@
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
-          <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <DebugInformation>0</DebugInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath></ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -730,19 +730,39 @@
           <GroupName>gui</GroupName>
           <Files>
             <File>
-              <FileName>DemoPresenter.cpp</FileName>
+              <FileName>animationButton.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/demo_screen/demopresenter.cpp</FilePath>
+              <FilePath>../touchgfx/gui/src/containers/animationbutton.cpp</FilePath>
             </File>
             <File>
-              <FileName>DemoView.cpp</FileName>
+              <FileName>bottombarContainer.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/demo_screen/demoview.cpp</FilePath>
+              <FilePath>../touchgfx/gui/src/containers/bottombarcontainer.cpp</FilePath>
             </File>
             <File>
-              <FileName>FakeHardware.cpp</FileName>
+              <FileName>CoverTransition.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/model/fakehardware.cpp</FilePath>
+              <FilePath>../touchgfx/gui/src/transitions/covertransition.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CubeTransition.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/transitions/cubetransition.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CurtainsTransition.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/transitions/curtainstransition.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>FlipTransition.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/transitions/fliptransition.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>FloatEasingEquations.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/common/floateasingequations.cpp</FilePath>
             </File>
             <File>
               <FileName>FrontendApplication.cpp</FileName>
@@ -750,19 +770,14 @@
               <FilePath>../touchgfx/gui/src/common/frontendapplication.cpp</FilePath>
             </File>
             <File>
-              <FileName>IntroductionPresenter.cpp</FileName>
+              <FileName>mainPresenter.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/introduction_screen/introductionpresenter.cpp</FilePath>
+              <FilePath>../touchgfx/gui/src/main_screen/mainpresenter.cpp</FilePath>
             </File>
             <File>
-              <FileName>IntroductionView.cpp</FileName>
+              <FileName>mainView.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/introduction_screen/introductionview.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>LabelBox.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/containers/labelbox.cpp</FilePath>
+              <FilePath>../touchgfx/gui/src/main_screen/mainview.cpp</FilePath>
             </File>
             <File>
               <FileName>Model.cpp</FileName>
@@ -770,15 +785,50 @@
               <FilePath>../touchgfx/gui/src/model/model.cpp</FilePath>
             </File>
             <File>
-              <FileName>ModelListener.cpp</FileName>
+              <FileName>RolloutTransition.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/include/gui/model/modellistener.cpp</FilePath>
+              <FilePath>../touchgfx/gui/src/transitions/rollouttransition.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>SlideTransition.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/transitions/slidetransition.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>SpinOutTransition.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/transitions/spinouttransition.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>SpinTransition.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/transitions/spintransition.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>topbarContainer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/containers/topbarcontainer.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>transitionItem.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/containers/transitionitem.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Transitions.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/transitions/transitions.cpp</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>generated</GroupName>
           <Files>
+            <File>
+              <FileName>animationButtonBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/containers/animationbuttonbase.cpp</FilePath>
+            </File>
             <File>
               <FileName>ApplicationFontProvider.cpp</FileName>
               <FileType>8</FileType>
@@ -790,34 +840,29 @@
               <FilePath>../touchgfx/generated/images/src/bitmapdatabase.cpp</FilePath>
             </File>
             <File>
+              <FileName>bottombarContainerBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/containers/bottombarcontainerbase.cpp</FilePath>
+            </File>
+            <File>
               <FileName>CachedFont.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/cachedfont.cpp</FilePath>
             </File>
             <File>
-              <FileName>DemoViewBase.cpp</FileName>
+              <FileName>Font_Saira_Medium_11_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/gui_generated/src/demo_screen/demoviewbase.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_saira_medium_11_4bpp_0.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_SourceCodePro_Regular_10_4bpp_0.cpp</FileName>
+              <FileName>Font_Saira_Medium_20_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_sourcecodepro_regular_10_4bpp_0.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_saira_medium_20_4bpp_0.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_SourceCodePro_Regular_16_4bpp_0.cpp</FileName>
+              <FileName>Font_Saira_SemiBold_30_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_sourcecodepro_regular_16_4bpp_0.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_SourceSansPro_Bold_128_4bpp_0.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_sourcesanspro_bold_128_4bpp_0.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_SourceSansPro_Bold_30_4bpp_0.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_sourcesanspro_bold_30_4bpp_0.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/font_saira_semibold_30_4bpp_0.cpp</FilePath>
             </File>
             <File>
               <FileName>FontCache.cpp</FileName>
@@ -835,59 +880,199 @@
               <FilePath>../touchgfx/generated/fonts/src/generatedfont.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_arrow_left.cpp</FileName>
+              <FileName>image_animationType.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_arrow_left.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_animationtype.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_arrow_right.cpp</FileName>
+              <FileName>image_background_day.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_arrow_right.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_background_day.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_dark_button.cpp</FileName>
+              <FileName>image_background_day_full.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_dark_button.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_background_day_full.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_dark_button_pressed.cpp</FileName>
+              <FileName>image_background_night.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_dark_button_pressed.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_background_night.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_logo.cpp</FileName>
+              <FileName>image_background_night_full.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/image_logo.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_background_night_full.cpp</FilePath>
             </File>
             <File>
-              <FileName>IntroductionViewBase.cpp</FileName>
+              <FileName>image_bg_sun.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/gui_generated/src/introduction_screen/introductionviewbase.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_bg_sun.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_SourceCodePro_Regular_10_4bpp.cpp</FileName>
+              <FileName>image_chrom-art_off.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_sourcecodepro_regular_10_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_chrom-art_off.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_SourceCodePro_Regular_16_4bpp.cpp</FileName>
+              <FileName>image_chrom-art_on.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_sourcecodepro_regular_16_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_chrom-art_on.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_SourceSansPro_Bold_128_4bpp.cpp</FileName>
+              <FileName>image_chrom-art_on_light.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_sourcesanspro_bold_128_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_chrom-art_on_light.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_SourceSansPro_Bold_30_4bpp.cpp</FileName>
+              <FileName>image_clouds.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_sourcesanspro_bold_30_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_clouds.cpp</FilePath>
             </File>
             <File>
-              <FileName>LabelBoxBase.cpp</FileName>
+              <FileName>image_emptyBottombarBg.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/gui_generated/src/containers/labelboxbase.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_emptybottombarbg.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_fast.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_fast.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_icon_info.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_icon_info.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_icon_play_dark.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_icon_play_dark.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_icon_play_light.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_icon_play_light.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_icon_speed_slider.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_icon_speed_slider.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_icon_tab_close.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_icon_tab_close.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_icon_tab_mini_slider.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_icon_tab_mini_slider.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_icon_tab_open.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_icon_tab_open.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_moon.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_moon.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_slideMenuButton.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_slidemenubutton.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_slow.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_slow.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_solid_togglr.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_solid_togglr.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_toggle_speed_bg.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_toggle_speed_bg.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_trans_bund_bg.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_trans_bund_bg.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_trans_bund_gradient_overlay_1.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_trans_bund_gradient_overlay_1.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_trans_bund_gradient_overlay_2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_trans_bund_gradient_overlay_2.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_trans_bund_tab.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_trans_bund_tab.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_trans_chrom-art_off.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_trans_chrom-art_off.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_trans_chrom-art_on.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_trans_chrom-art_on.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_trans_top_bar.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_trans_top_bar.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_transitionType1.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_transitiontype1.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_transitionType2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_transitiontype2.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_transitionType3.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_transitiontype3.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_transitionType4.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_transitiontype4.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_transitionType5.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_transitiontype5.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_Saira_Medium_11_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_saira_medium_11_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_Saira_Medium_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_saira_medium_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_Saira_SemiBold_30_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_saira_semibold_30_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>LanguageGb.cpp</FileName>
@@ -895,29 +1080,39 @@
               <FilePath>../touchgfx/generated/texts/src/languagegb.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_SourceCodePro_Regular_10_4bpp.cpp</FileName>
+              <FileName>mainViewBase.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_sourcecodepro_regular_10_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/gui_generated/src/main_screen/mainviewbase.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_SourceCodePro_Regular_16_4bpp.cpp</FileName>
+              <FileName>Table_Saira_Medium_11_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_sourcecodepro_regular_16_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/table_saira_medium_11_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_SourceSansPro_Bold_128_4bpp.cpp</FileName>
+              <FileName>Table_Saira_Medium_20_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_sourcesanspro_bold_128_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/table_saira_medium_20_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_SourceSansPro_Bold_30_4bpp.cpp</FileName>
+              <FileName>Table_Saira_SemiBold_30_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_sourcesanspro_bold_30_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/table_saira_semibold_30_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Texts.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/texts/src/texts.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>topbarContainerBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/containers/topbarcontainerbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>transitionItemBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/containers/transitionitembase.cpp</FilePath>
             </File>
             <File>
               <FileName>TypedTextDatabase.cpp</FileName>

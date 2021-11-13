@@ -64,17 +64,47 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
- gui/include/gui/model/Model.hpp \
- gui/include/gui/screen_screen/screenView.hpp \
- generated/gui_generated/include/gui_generated/screen_screen/screenViewBase.hpp \
+ gui/include/gui/model/Model.hpp gui/include/gui/main_screen/mainView.hpp \
+ generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
- gui/include/gui/screen_screen/screenPresenter.hpp \
+ gui/include/gui/main_screen/mainPresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SlideMenu.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ gui/include/gui/containers/bottombarContainer.hpp \
+ generated/gui_generated/include/gui_generated/containers/bottombarContainerBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheel.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp \
+ gui/include/gui/containers/transitionItem.hpp \
+ generated/gui_generated/include/gui_generated/containers/transitionItemBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
+ gui/include/gui/containers/animationButton.hpp \
+ generated/gui_generated/include/gui_generated/containers/animationButtonBase.hpp \
+ gui/include/gui/common/structs.hpp \
+ gui/include/gui/containers/topbarContainer.hpp \
+ generated/gui_generated/include/gui_generated/containers/topbarContainerBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
+ gui/include/gui/Transitions/FlipTransition.hpp \
+ gui/include/gui/Transitions/Transitions.hpp \
+ gui/include/gui/Transitions/CoverTransition.hpp \
+ gui/include/gui/Transitions/SlideTransition.hpp \
+ gui/include/gui/Transitions/CurtainsTransition.hpp \
+ gui/include/gui/Transitions/RolloutTransition.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/CacheableContainer.hpp \
+ gui/include/gui/Transitions/CubeTransition.hpp \
+ gui/include/gui/Transitions/SpinOutTransition.hpp \
+ gui/include/gui/Transitions/SpinTransition.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
@@ -209,13 +239,13 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 gui/include/gui/model/Model.hpp:
 
-gui/include/gui/screen_screen/screenView.hpp:
+gui/include/gui/main_screen/mainView.hpp:
 
-generated/gui_generated/include/gui_generated/screen_screen/screenViewBase.hpp:
+generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
-gui/include/gui/screen_screen/screenPresenter.hpp:
+gui/include/gui/main_screen/mainPresenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
 
@@ -223,11 +253,73 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SlideMenu.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+
+gui/include/gui/containers/bottombarContainer.hpp:
+
+generated/gui_generated/include/gui_generated/containers/bottombarContainerBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheel.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp:
+
+gui/include/gui/containers/transitionItem.hpp:
+
+generated/gui_generated/include/gui_generated/containers/transitionItemBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
+
+gui/include/gui/containers/animationButton.hpp:
+
+generated/gui_generated/include/gui_generated/containers/animationButtonBase.hpp:
+
+gui/include/gui/common/structs.hpp:
+
+gui/include/gui/containers/topbarContainer.hpp:
+
+generated/gui_generated/include/gui_generated/containers/topbarContainerBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
+
+gui/include/gui/Transitions/FlipTransition.hpp:
+
+gui/include/gui/Transitions/Transitions.hpp:
+
+gui/include/gui/Transitions/CoverTransition.hpp:
+
+gui/include/gui/Transitions/SlideTransition.hpp:
+
+gui/include/gui/Transitions/CurtainsTransition.hpp:
+
+gui/include/gui/Transitions/RolloutTransition.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/CacheableContainer.hpp:
+
+gui/include/gui/Transitions/CubeTransition.hpp:
+
+gui/include/gui/Transitions/SpinOutTransition.hpp:
+
+gui/include/gui/Transitions/SpinTransition.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 

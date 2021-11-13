@@ -1,6 +1,6 @@
-build/MINGW32_NT-6.2/generated/gui_generated/src/containers/TopBarContainerBase.o: \
- generated/gui_generated/src/containers/TopBarContainerBase.cpp \
- generated/gui_generated/include/gui_generated/containers/TopBarContainerBase.hpp \
+build/MINGW32_NT-6.2/generated/gui_generated/src/containers/topbarContainerBase.o: \
+ generated/gui_generated/src/containers/topbarContainerBase.cpp \
+ generated/gui_generated/include/gui_generated/containers/topbarContainerBase.hpp \
  gui/include/gui/common/FrontendApplication.hpp \
  generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -46,11 +46,13 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/containers/TopBarContainerBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
  generated/images/include/BitmapDatabase.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
 
-generated/gui_generated/include/gui_generated/containers/TopBarContainerBase.hpp:
+generated/gui_generated/include/gui_generated/containers/topbarContainerBase.hpp:
 
 gui/include/gui/common/FrontendApplication.hpp:
 
@@ -141,6 +143,10 @@ gui/include/gui/model/Model.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
 
 generated/images/include/BitmapDatabase.hpp:
 

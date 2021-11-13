@@ -13,19 +13,19 @@ class FlashDataReader;
 
 struct Typography
 {
-    static const touchgfx::FontId OUTPUT = 0;
-    static const touchgfx::FontId MAIN = 1;
-    static const touchgfx::FontId CODE = 2;
-    static const touchgfx::FontId DESCRIPTION = 3;
+    static const touchgfx::FontId WHEELTEXT = 0;
+    static const touchgfx::FontId LARGETRANSITIONTEXT = 1;
+    static const touchgfx::FontId TOPBARTEXT = 2;
+    static const touchgfx::FontId ANIMATIONSPEED = 3;
 };
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId OUTPUT = 0;      // SourceSansPro_Bold_128_4bpp
-    static const touchgfx::FontId MAIN = 1;        // SourceSansPro_Bold_30_4bpp
-    static const touchgfx::FontId CODE = 2;        // SourceCodePro_Regular_16_4bpp
-    static const touchgfx::FontId DESCRIPTION = 3; // SourceCodePro_Regular_10_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 4;
+    static const touchgfx::FontId WHEELTEXT = 0;           // Saira_Medium_11_4bpp
+    static const touchgfx::FontId LARGETRANSITIONTEXT = 1; // Saira_SemiBold_30_4bpp
+    static const touchgfx::FontId TOPBARTEXT = 2;          // Saira_Medium_20_4bpp
+    static const touchgfx::FontId ANIMATIONSPEED = 0;      // Saira_Medium_11_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 3;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

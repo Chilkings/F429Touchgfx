@@ -873,14 +873,14 @@ ARM Macro Assembler    Page 14
   448 0000001C                 END
               00000000 
               00000000 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
-interwork --depend=f429touchgfx\startup_stm32f429xx.d -of429touchgfx\startup_st
-m32f429xx.o -I..\Core\Inc -I.\RTE\_F429Touchgfx -I"D:\Program Files (x86)\Keil_
-v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include" -I"D:\Program Files (x86)\Keil
-_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Inclu
-de" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 533" --
-predefine="_RTE_ SETA 1" --predefine="STM32F429xx SETA 1" --predefine="_RTE_ SE
-TA 1" --list=startup_stm32f429xx.lst startup_stm32f429xx.s
+Command Line: --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=interwor
+k --depend=f429touchgfx\startup_stm32f429xx.d -of429touchgfx\startup_stm32f429x
+x.o -I..\Core\Inc -I.\RTE\_F429Touchgfx -I"D:\Program Files (x86)\Keil_v5\Arm\P
+acks\ARM\CMSIS\5.7.0\CMSIS\Core\Include" -I"D:\Program Files (x86)\Keil_v5\Arm\
+Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include" --pr
+edefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 533" --predefin
+e="_RTE_ SETA 1" --predefine="STM32F429xx SETA 1" --predefine="_RTE_ SETA 1" --
+list=startup_stm32f429xx.lst startup_stm32f429xx.s
 
 
 
