@@ -6,35 +6,31 @@
 
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
-#include <gui/main_screen/mainPresenter.hpp>
+#include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/containers/SlideMenu.hpp>
-#include <gui/containers/bottombarContainer.hpp>
-#include <gui/containers/topbarContainer.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/EasingEquations.hpp>
-#include <touchgfx/mixins/FadeAnimator.hpp>
-#include "gui/common/structs.hpp"
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
-class mainViewBase : public touchgfx::View<mainPresenter>
+class MainViewBase : public touchgfx::View<MainPresenter>
 {
 public:
-    mainViewBase();
-    virtual ~mainViewBase() {}
+    MainViewBase();
+    virtual ~MainViewBase() {}
     virtual void setupScreen();
 
     /*
-     * Custom Actions
+     * Virtual Action Handlers
      */
-    virtual void startTransitionPressed();
-    virtual void getTransitionInfo(TransitionInfo* value);
-    virtual void scrollWheelPressed();
-    virtual void scrollWheelAnimationEnded();
-    virtual void sliderMenuStateChanged(SlideMenu::State value);
-    virtual void ChromARTPressed(bool value);
-    virtual void animationSpeedButtonPressed(bool value);
+    virtual void buttonUpClicked()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void buttonDownClicked()
+    {
+        // Override and implement this function in Main
+    }
 
 protected:
     FrontendApplication& application() {
@@ -45,37 +41,29 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Box backgroundBox;
-    touchgfx::Image background;
-    touchgfx::SlideMenu transitionMenu;
-    bottombarContainer bottombar;
-    topbarContainer topbar;
-    touchgfx::FadeAnimator< touchgfx::TextArea > selectedTransitionText;
-    touchgfx::FadeAnimator< touchgfx::Button > startTransitionButton;
+    touchgfx::Image image1;
+    touchgfx::ButtonWithIcon buttonUp;
+    touchgfx::ButtonWithIcon buttonDown;
+    touchgfx::Image textCounter;
+    touchgfx::TextAreaWithOneWildcard textArea1;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTAREA1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textArea1Buffer[TEXTAREA1_SIZE];
 
 private:
 
     /*
      * Callback Declarations
      */
-    touchgfx::Callback<mainViewBase, const touchgfx::AbstractButton&> buttonCallback;
-    touchgfx::Callback<mainViewBase, const touchgfx::SlideMenu&> slideMenuStateChangedCallback;
-    touchgfx::Callback<mainViewBase, TransitionInfo*> bottombarGetTransitionInfoCallback;
-    touchgfx::Callback<mainViewBase> bottombarScrollWheelPressedCallback;
-    touchgfx::Callback<mainViewBase> bottombarScrollWheelAnimationEndedCallback;
-    touchgfx::Callback<mainViewBase, bool> topbarChromARTStateChangedTriggerCallback;
-    touchgfx::Callback<mainViewBase, bool> bottombarAnimaitonSpeedPressedCallback;
+    touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&> buttonCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
-    void slideMenuStateChangedCallbackHandler(const touchgfx::SlideMenu& src);
-    void bottombarGetTransitionInfoCallbackHandler(TransitionInfo* value);
-    void bottombarScrollWheelPressedCallbackHandler();
-    void bottombarScrollWheelAnimationEndedCallbackHandler();
-    void topbarChromARTStateChangedTriggerCallbackHandler(bool value);
-    void bottombarAnimaitonSpeedPressedCallbackHandler(bool value);
 
 };
 

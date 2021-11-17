@@ -1,8 +1,6 @@
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
-#include "touchgfx/hal/Types.hpp"
-
 class ModelListener;
 
 class Model

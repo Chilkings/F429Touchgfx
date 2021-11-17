@@ -6,12 +6,12 @@
 
 using namespace touchgfx;
 
-class mainView;
+class MainView;
 
-class mainPresenter : public touchgfx::Presenter, public ModelListener
+class MainPresenter : public touchgfx::Presenter, public ModelListener
 {
 public:
-    mainPresenter(mainView& v);
+    MainPresenter(MainView& v);
 
     /**
      * The activate function is called automatically when this screen is "switched in"
@@ -25,11 +25,12 @@ public:
      */
     virtual void deactivate();
 
-    virtual ~mainPresenter() {};
-private:
-    mainPresenter();
+    virtual ~MainPresenter() {};
 
-    mainView& view;
+private:
+    MainPresenter();
+
+    MainView& view;
 };
 
 #endif // MAINPRESENTER_HPP

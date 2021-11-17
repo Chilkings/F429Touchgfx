@@ -1,0 +1,2 @@
+f429touchgfx\image_animating_buttons_full_table_shadow_left.o: ../touchgfx/generated/images/src/animatingbuttonsmenu/image_animating_buttons_full_table_shadow_left.cpp
+f429touchgfx\image_animating_buttons_full_table_shadow_left.o: ../middlewares/st/touchgfx/framework/include/touchgfx/hal/Config.hpp

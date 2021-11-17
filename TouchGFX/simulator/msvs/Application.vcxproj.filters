@@ -172,35 +172,29 @@
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>83E5BA40-44E6-9119-26B8-F3A3067DFF69</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\containers">
-      <UniqueIdentifier>6A0EB3A8-2761-CCE8-BE81-F20BD1390BCD</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\containers">
-      <UniqueIdentifier>6F02DCA3-F90C-81A3-3DC4-2FF914FABFAB</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\generated\gui_generated\containers">
       <UniqueIdentifier>49BCAD06-AF23-670D-5992-C8431D9690FA</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\generated\gui_generated\containers">
       <UniqueIdentifier>0DB7DB48-7932-54F1-9610-71F5645CD179</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\main_screen">
-      <UniqueIdentifier>50FA4039-066A-D308-9ED9-C249438BEF0B</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\gui\Transitions">
       <UniqueIdentifier>CD71A21E-ECAE-72FA-9E81-946C50A53A76</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\main_screen">
-      <UniqueIdentifier>55EB7574-E19B-167F-EFB8-FA04C2E4AC7A</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\gui\Transitions">
       <UniqueIdentifier>B9274E77-CDC8-C6E5-DC48-A696773669A3</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\main_screen">
+      <UniqueIdentifier>986F7E4E-E81B-1CDC-1E2E-FC0EA5154DB7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\main_screen">
+      <UniqueIdentifier>C86F7A0B-1E73-538A-ACA3-091DD028D381</UniqueIdentifier>
+    </Filter>
     <Filter Include="Header Files\generated\gui_generated\main_screen">
-      <UniqueIdentifier>982A852E-F130-3ABE-C0D2-FAD963FF6580</UniqueIdentifier>
+      <UniqueIdentifier>71C891F3-84AA-A9D4-F120-AF51596F302A</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\generated\gui_generated\main_screen">
-      <UniqueIdentifier>BA271C0F-7DB2-EBE1-BA2B-BBDB297BE162</UniqueIdentifier>
+      <UniqueIdentifier>66D2DF9A-8C50-0A0A-5D03-DE9D6EEAA11E</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -234,68 +228,14 @@
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\animationButton.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\animationButtonBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\bottombarContainer.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\bottombarContainerBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\Transitions\CoverTransition.cpp">
-      <Filter>Source Files\gui\Transitions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\Transitions\CubeTransition.cpp">
-      <Filter>Source Files\gui\Transitions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\Transitions\CurtainsTransition.cpp">
-      <Filter>Source Files\gui\Transitions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\Transitions\FlipTransition.cpp">
-      <Filter>Source Files\gui\Transitions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\common\FloatEasingEquations.cpp">
-      <Filter>Source Files\gui\common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\main_screen\mainPresenter.cpp">
+    <ClCompile Include="..\..\gui\src\main_screen\MainPresenter.cpp">
       <Filter>Source Files\gui\main_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\main_screen\mainView.cpp">
+    <ClCompile Include="..\..\gui\src\main_screen\MainView.cpp">
       <Filter>Source Files\gui\main_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\main_screen\mainViewBase.cpp">
+    <ClCompile Include="..\..\generated\gui_generated\src\main_screen\MainViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\main_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\Transitions\RolloutTransition.cpp">
-      <Filter>Source Files\gui\Transitions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\Transitions\SlideTransition.cpp">
-      <Filter>Source Files\gui\Transitions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\Transitions\SpinOutTransition.cpp">
-      <Filter>Source Files\gui\Transitions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\Transitions\SpinTransition.cpp">
-      <Filter>Source Files\gui\Transitions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\topbarContainer.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\topbarContainerBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\transitionItem.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\transitionItemBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\Transitions\Transitions.cpp">
-      <Filter>Source Files\gui\Transitions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -739,74 +679,14 @@
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\animationButton.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\animationButtonBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\bottombarContainer.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\bottombarContainerBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\common\constans.hpp">
-      <Filter>Header Files\gui\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\Transitions\CoverTransition.hpp">
-      <Filter>Header Files\gui\Transitions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\Transitions\CubeTransition.hpp">
-      <Filter>Header Files\gui\Transitions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\Transitions\CurtainsTransition.hpp">
-      <Filter>Header Files\gui\Transitions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\Transitions\FlipTransition.hpp">
-      <Filter>Header Files\gui\Transitions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\common\FloatEasingEquations.hpp">
-      <Filter>Header Files\gui\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\main_screen\mainPresenter.hpp">
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainPresenter.hpp">
       <Filter>Header Files\gui\main_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\main_screen\mainView.hpp">
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainView.hpp">
       <Filter>Header Files\gui\main_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\main_screen\mainViewBase.hpp">
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\main_screen\MainViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\main_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\Transitions\RolloutTransition.hpp">
-      <Filter>Header Files\gui\Transitions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\Transitions\SlideTransition.hpp">
-      <Filter>Header Files\gui\Transitions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\Transitions\SpinOutTransition.hpp">
-      <Filter>Header Files\gui\Transitions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\Transitions\SpinTransition.hpp">
-      <Filter>Header Files\gui\Transitions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\common\structs.hpp">
-      <Filter>Header Files\gui\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\topbarContainer.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\topbarContainerBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\transitionItem.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\transitionItemBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\Transitions\Transitions.hpp">
-      <Filter>Header Files\gui\Transitions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

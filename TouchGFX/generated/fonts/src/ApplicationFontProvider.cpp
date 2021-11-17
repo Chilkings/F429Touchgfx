@@ -9,18 +9,15 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
 {
     switch (typography)
     {
-    case Typography::WHEELTEXT:
-        // Saira_Medium_11_4bpp
+    case Typography::DEFAULT:
+        // verdana_80_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[0]);
-    case Typography::LARGETRANSITIONTEXT:
-        // Saira_SemiBold_30_4bpp
+    case Typography::LARGE:
+        // verdana_40_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[1]);
-    case Typography::TOPBARTEXT:
-        // Saira_Medium_20_4bpp
+    case Typography::SMALL:
+        // verdana_10_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[2]);
-    case Typography::ANIMATIONSPEED:
-        // Saira_Medium_11_4bpp
-        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[0]);
     default:
         return 0;
     }
