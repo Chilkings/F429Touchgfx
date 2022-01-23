@@ -68,3 +68,10 @@ void delay_us(uint32_t nus)
 	}
 }
 
+void delay_xms(uint32_t ms)
+{
+	while(ms--)
+	{
+		delay_us(1000);
+	}
+}

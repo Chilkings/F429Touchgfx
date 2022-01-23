@@ -46,10 +46,10 @@ f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/inc
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/common/Partition.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp
 f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/common/FrontendApplication.hpp
-f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/screen1_screen/Screen1View.hpp
-f429touchgfx\frontendapplicationbase.o: ../touchgfx/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp
+f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/main_screen/MainView.hpp
+f429touchgfx\frontendapplicationbase.o: ../touchgfx/generated/gui_generated/include/gui_generated/main_screen/MainViewBase.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/mvp/View.hpp
-f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/screen1_screen/Screen1Presenter.hpp
+f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/main_screen/MainPresenter.hpp
 f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/model/ModelListener.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Box.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Widget.hpp

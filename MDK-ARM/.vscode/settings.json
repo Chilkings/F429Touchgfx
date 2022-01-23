@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "atcommand.h": "c",
+        "main.h": "c",
+        "mybm280_bh1750.h": "c"
+    }
+}

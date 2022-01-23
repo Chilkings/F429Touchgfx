@@ -22,31 +22,23 @@ Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
 D:\DoingProject\F429Touchgfx\MDK-ARM\F429Touchgfx.uvprojx
-Project File Date:  11/17/2021
+Project File Date:  01/22/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin'
-*** Warning: You are compiling one or more files of source type C++ and have selected 'use MicroLIB'. MicroLIB does not support C++!
-  
 Build target 'F429Touchgfx'
-compiling Screen1Presenter.cpp...
-compiling Screen1View.cpp...
-../touchgfx/gui/src/screen1_screen/screen1view.cpp(30): warning:  #1-D: last line of file ends without a newline
-  }
-../touchgfx/gui/src/screen1_screen/screen1view.cpp: 1 warning, 0 errors
-compiling FrontendApplicationBase.cpp...
-compiling TouchGFXGeneratedHAL.cpp...
-../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp(56): warning:  #1300-D: initialize inherits implicit virtual
-      void initialize();
-../TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp: 1 warning, 0 errors
-compiling TouchGFXConfiguration.cpp...
-../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp(56): warning:  #1300-D: initialize inherits implicit virtual
-      void initialize();
-../TouchGFX/target/TouchGFXHAL.hpp(51): warning:  #1300-D: initialize inherits implicit virtual
-      void initialize();
-../TouchGFX/target/generated/TouchGFXConfiguration.cpp: 2 warnings, 0 errors
+compiling main.c...
+../Core/Inc/delay.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/gt1151q_iic_driver.h(47): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ATFram\log.h(51): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/main.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=62938 RO-data=864894 RW-data=564 ZI-data=23060  
+F429Touchgfx\F429Touchgfx.sct(21): warning: L6329W: Pattern *.o(ExtFlashSection) only matches removed unused sections.
+Program Size: Code=51586 RO-data=18146 RW-data=296 ZI-data=23288  
+Finished: 0 information, 1 warning and 0 error messages.
 FromELF: creating hex file...
 "F429Touchgfx\F429Touchgfx.axf" - 0 Error(s), 4 Warning(s).
 
@@ -72,7 +64,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.4.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

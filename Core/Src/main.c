@@ -35,6 +35,11 @@
 /* USER CODE BEGIN Includes */
 #include "gt1151q_iic_driver.h"
 #include "w25qxx.h"
+#include "MY_Bm280_Bh1750.h"
+#include "24c02.h"
+#include "AT.h"
+#include "cJSON.h"
+//#include "Soft_IIC.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -108,10 +113,25 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
   MX_TIM14_Init();
-  MX_TouchGFX_Init();
+//  MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 	GT1151_Init();
 	W25QXX_Init();
+//	BMP280_Bh1750_Init();
+//  I2C myI2C(GPIOB,GPIO_PIN_11,GPIOB,GPIO_PIN_10);
+
+
+
+	AT24CXX_Init();
+  ATFormInit();
+	while(AT24CXX_Check())	//检测不到24c02
+	{
+		printf("\r\n检测不到AT24C02：\r\n");
+		delay_xms(500);
+		HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	}
+	
+	
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
@@ -192,6 +212,23 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+#pragma import(__use_no_semihosting)             
+//标准库需要的支持函数                 
+struct __FILE 
+{ 
+	int handle; 
+}; 
+void _ttywrch(int ch)
+{
+//    ch=ch;
+	HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY); 
+}
+FILE __stdout;       
+//定义_sys_exit()以避免使用半主机模式    
+void _sys_exit(int x) 
+{ 
+	x = x; 
+} 
 int fputc(int ch ,FILE *F)
 {
 	HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY); //按照配置自行修改huart1

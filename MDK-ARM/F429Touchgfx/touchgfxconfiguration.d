@@ -51,10 +51,10 @@ f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/inclu
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/platform/driver/touch/TouchController.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/model/Model.hpp
-f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/screen1_screen/Screen1View.hpp
-f429touchgfx\touchgfxconfiguration.o: ../touchgfx/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp
+f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/main_screen/MainView.hpp
+f429touchgfx\touchgfxconfiguration.o: ../touchgfx/generated/gui_generated/include/gui_generated/main_screen/MainViewBase.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/mvp/View.hpp
-f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/screen1_screen/Screen1Presenter.hpp
+f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/main_screen/MainPresenter.hpp
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/model/ModelListener.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Box.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Widget.hpp

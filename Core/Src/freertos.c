@@ -27,6 +27,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
+#include "AT.h"
+#include "MY_Bm280_Bh1750.h"
+#include "cJSON.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,7 +52,9 @@
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
-osThreadId myTaskHandle;
+osThreadId ATParseHandle;
+osThreadId ATFramHandle;
+osThreadId ATSendHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -57,7 +62,9 @@ osThreadId myTaskHandle;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
-void StartTask(void const * argument);
+void StartATParse(void const * argument);
+void StartATFram(void const * argument);
+void StartATSend(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -108,9 +115,17 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 2048);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
-  /* definition and creation of myTask */
-  osThreadDef(myTask, StartTask, osPriorityNormal, 0, 256);
-  myTaskHandle = osThreadCreate(osThread(myTask), NULL);
+  /* definition and creation of ATParse */
+  osThreadDef(ATParse, StartATParse, osPriorityLow, 0, 512);
+  ATParseHandle = osThreadCreate(osThread(ATParse), NULL);
+
+  /* definition and creation of ATFram */
+  osThreadDef(ATFram, StartATFram, osPriorityNormal, 0, 512);
+  ATFramHandle = osThreadCreate(osThread(ATFram), NULL);
+
+  /* definition and creation of ATSend */
+  osThreadDef(ATSend, StartATSend, osPriorityLow, 0, 256);
+  ATSendHandle = osThreadCreate(osThread(ATSend), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -128,7 +143,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-	MX_TouchGFX_Process();
+//	MX_TouchGFX_Process();
   /* Infinite loop */
   for(;;)
   {
@@ -137,23 +152,114 @@ void StartDefaultTask(void const * argument)
   /* USER CODE END StartDefaultTask */
 }
 
-/* USER CODE BEGIN Header_StartTask */
+/* USER CODE BEGIN Header_StartATParse */
 /**
-* @brief Function implementing the myTask thread.
+* @brief Function implementing the ATParse thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask */
-void StartTask(void const * argument)
+/* USER CODE END Header_StartATParse */
+void StartATParse(void const * argument)
 {
-  /* USER CODE BEGIN StartTask */
+  /* USER CODE BEGIN StartATParse */
   /* Infinite loop */
   for(;;)
   {
-		printf("hello\r\n");
-    osDelay(1000);
+    osDelay(100);
+		if(uxQueueSpacesAvailable(ATcmdQueue)==10)//队列为空
+		{
+			if(xSemaphoreTake(ATSchRunSemaphore,( TickType_t ) 10)==pdTRUE) //获得互斥量:上锁 
+			{
+				PrintIotRxData();
+				xSemaphoreGive(ATSchRunSemaphore);/* 释放互斥量: 开锁 */
+			}
+		}
   }
-  /* USER CODE END StartTask */
+  /* USER CODE END StartATParse */
+}
+
+/* USER CODE BEGIN Header_StartATFram */
+/**
+* @brief Function implementing the ATFram thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartATFram */
+void StartATFram(void const * argument)
+{
+  /* USER CODE BEGIN StartATFram */
+	HAL_GPIO_WritePin(Iot_Reset_GPIO_Port,Iot_Reset_Pin,GPIO_PIN_RESET);		//复位
+	osDelay(500);
+	HAL_GPIO_WritePin(Iot_Reset_GPIO_Port,Iot_Reset_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(IOTpower_GPIO_Port,IOTpower_Pin,GPIO_PIN_RESET);      //开机
+	osDelay(2200);
+	HAL_GPIO_WritePin(IOTpower_GPIO_Port,IOTpower_Pin,GPIO_PIN_SET);
+  
+	printf("联网中...");
+	while(strstr(UartRXBuff,"IP")==NULL)//等待设备联网
+	{
+		printf(".");
+		osDelay(1000);
+	}
+	printf("\r\n联网成功!");
+	PrintIotRxData();
+  /* Infinite loop */
+  for(;;)
+  {
+    ATCommandSendScheduler();
+  }
+  /* USER CODE END StartATFram */
+}
+
+/* USER CODE BEGIN Header_StartATSend */
+/**
+* @brief Function implementing the ATSend thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartATSend */
+void StartATSend(void const * argument)
+{
+  /* USER CODE BEGIN StartATSend */
+	static char PubParam[400];
+	char * jsonRes;
+	
+	ATCommandRegister(AT,EXEXCMD,NULL);
+	ATCommandRegister(MQTTCFG,WRITECMD,"\"a1wocurZ0R0.iot-as-mqtt.cn-shanghai.aliyuncs.com\",1883,\"711382|securemode=3,signmethod=hmacsha1|\",\"60\",\"M5311_1382&a1wocurZ0R0\",\"A40C776AD48B66A8DB8A5EEE517625E2DB4501B4\",1");
+	ATCommandRegister(MQTTOPEN,WRITECMD,"1,1,0,0,0");
+	ATCommandRegister(MQTTSUB,WRITECMD,"/sys/a1wocurZ0R0/M5311_1382/thing/service/property/set");
+	
+  /* Infinite loop */
+  for(;;)
+  {
+		osDelay(10000);
+//		osDelay(10000);
+		while(uxQueueSpacesAvailable(ATcmdQueue)!=10)//等待队列为空
+		{
+			osDelay(100);
+		}
+		cJSON* cjson_root = NULL;
+		cJSON* cjson_params = NULL;
+		cjson_root =  cJSON_CreateObject();
+		cjson_params  =  cJSON_CreateObject();
+		cJSON_AddNumberToObject(cjson_params,"CurrentTemperature",34);
+		cJSON_AddNumberToObject(cjson_params,"CurrentHumidity",(uint32_t)12);
+		cJSON_AddNumberToObject(cjson_params,"LightLux",(uint32_t)45);
+		cJSON_AddNumberToObject(cjson_params,"Atmosphere",(uint32_t)39);
+		cJSON_AddNumberToObject(cjson_params,"lie",34);
+		cJSON_AddItemToObject(cjson_root,"params",cjson_params);
+		jsonRes = cJSON_Print(cjson_root);
+//			printf("上报数据：%s\n\r",jsonRes);
+//			printf("AT+MQTTPUB=\"/sys/a1wocurZ0R0/M5311_1382/thing/event/property/post\",1,1,0,0,\"%s\"\r\n",jsonRes);
+		cJSON_Delete(cjson_root);				//删除Json数组
+		vPortFree(jsonRes);							//释放内存不释放就会出错
+		sprintf(PubParam,"\"/sys/a1wocurZ0R0/M5311_1382/thing/event/property/post\",1,1,0,0,\"%s\"",jsonRes);
+//		__LOG("上报数据：%s\r\n",PubParam);
+//			IOT_printf("%s\r\n",PubParam);
+		ATCommandRegister(MQTTPUB,WRITECMD,PubParam);
+
+  }
+  /* USER CODE END StartATSend */
 }
 
 /* Private application code --------------------------------------------------*/

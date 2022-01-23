@@ -48,10 +48,10 @@ f429touchgfx\touchgfxgeneratedhal.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bi
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Screen.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/model/Model.hpp
-f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/screen1_screen/Screen1View.hpp
-f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/main_screen/MainView.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/generated/gui_generated/include/gui_generated/main_screen/MainViewBase.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/mvp/View.hpp
-f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/screen1_screen/Screen1Presenter.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/main_screen/MainPresenter.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/model/ModelListener.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Box.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
