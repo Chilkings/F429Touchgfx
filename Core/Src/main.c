@@ -39,7 +39,7 @@
 #include "24c02.h"
 #include "AT.h"
 #include "cJSON.h"
-//#include "Soft_IIC.hpp"
+#include "system.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -117,13 +117,28 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	GT1151_Init();
 	W25QXX_Init();
-//	BMP280_Bh1750_Init();
-//  I2C myI2C(GPIOB,GPIO_PIN_11,GPIOB,GPIO_PIN_10);
-
-
-
+	
+	bh1750_start();  
+	bmp280_start();
+	
+	while(1)
+	{
+		update_sensor_value();
+		HAL_Delay(500);
+	}
+//	MPU6050_start();
+//	double mpu6050_x,mpu6050_y,mpu6050_z={0};
+//  while(1)
+//	{
+//		mpu6050_read_data(&mpu6050_x,&mpu6050_y,&mpu6050_z);
+//		printf("X:%.2f Y:%.2f Z:%.2f\r\n",mpu6050_x,mpu6050_y,mpu6050_z);
+//		HAL_Delay(200);
+//	}
+	
+	
 	AT24CXX_Init();
   ATFormInit();
+	
 	while(AT24CXX_Check())	//检测不到24c02
 	{
 		printf("\r\n检测不到AT24C02：\r\n");
@@ -135,9 +150,9 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
-  MX_FREERTOS_Init();
+//  MX_FREERTOS_Init();
   /* Start scheduler */
-  osKernelStart();
+//  osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */

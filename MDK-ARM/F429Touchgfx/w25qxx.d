@@ -1,5 +1,5 @@
-f429touchgfx\w25qxx.o: ..\Core\Src\w25qxx.c
-f429touchgfx\w25qxx.o: ../Core/Inc/w25qxx.h
+f429touchgfx\w25qxx.o: ..\BSP\Src\w25qxx.c
+f429touchgfx\w25qxx.o: ..\BSP\Inc\w25qxx.h
 f429touchgfx\w25qxx.o: ../Core/Inc/main.h
 f429touchgfx\w25qxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f429touchgfx\w25qxx.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -40,7 +40,7 @@ f429touchgfx\w25qxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f429touchgfx\w25qxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f429touchgfx\w25qxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 f429touchgfx\w25qxx.o: ../Core/Inc/spi.h
-f429touchgfx\w25qxx.o: ../Core/Inc/delay.h
+f429touchgfx\w25qxx.o: ..\BSP\Inc\delay.h
 f429touchgfx\w25qxx.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 f429touchgfx\w25qxx.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 f429touchgfx\w25qxx.o: ../Core/Inc/FreeRTOSConfig.h

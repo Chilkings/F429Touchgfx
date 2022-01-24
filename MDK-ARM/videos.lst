@@ -10,14 +10,14 @@ ARM Macro Assembler    Page 1
     4 00000000         
     5 00000000         
     6 00000000                 END
-Command Line: --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=interwor
-k --depend=f429touchgfx\videos.d -of429touchgfx\videos.o -I..\Core\Inc -I.\RTE\
-_F429Touchgfx -I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS
-\Core\Include" -I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2
-.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include" --predefine="__UVISION_VERSION
- SETA 533" --predefine="_RTE_ SETA 1" --predefine="STM32F429xx SETA 1" --predef
-ine="_RTE_ SETA 1" --list=videos.lst ../touchgfx/generated/videos/src/keil/vide
-os.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=f429touchgfx\videos.d -of429touchgfx\videos.o -I..\Core\Inc 
+-I.\RTE\_F429Touchgfx -I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7
+.0\CMSIS\Core\Include" -I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4
+xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include" --predefine="__UVISION
+_VERSION SETA 533" --predefine="_RTE_ SETA 1" --predefine="STM32F429xx SETA 1" 
+--predefine="_RTE_ SETA 1" --list=videos.lst ../touchgfx/generated/videos/src/k
+eil/videos.s
 
 
 

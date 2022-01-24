@@ -62,20 +62,21 @@ f429touchgfx\main.o: ../Core/Inc/usart.h
 f429touchgfx\main.o: ../Core/Inc/gpio.h
 f429touchgfx\main.o: ../Core/Inc/fmc.h
 f429touchgfx\main.o: ../TouchGFX/App/app_touchgfx.h
-f429touchgfx\main.o: ../Core/Inc/gt1151q_iic_driver.h
-f429touchgfx\main.o: ../Core/Inc/delay.h
+f429touchgfx\main.o: ..\BSP\Inc\gt1151q_iic_driver.h
+f429touchgfx\main.o: ..\BSP\Inc\delay.h
 f429touchgfx\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 f429touchgfx\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 f429touchgfx\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-f429touchgfx\main.o: ../Core/Inc/w25qxx.h
-f429touchgfx\main.o: ../Core/Inc/MY_Bm280_Bh1750.h
+f429touchgfx\main.o: ..\BSP\Inc\w25qxx.h
+f429touchgfx\main.o: ..\BSP\Inc\MY_Bm280_Bh1750.h
 f429touchgfx\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
 f429touchgfx\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-f429touchgfx\main.o: ../Core/Inc/24c02.h
+f429touchgfx\main.o: ..\BSP\Inc\24c02.h
 f429touchgfx\main.o: ..\ATFram\AT.h
 f429touchgfx\main.o: ..\ATFram\Hardware.h
 f429touchgfx\main.o: ..\ATFram\AT.h
 f429touchgfx\main.o: ..\ATFram\ATCommand.h
 f429touchgfx\main.o: ..\ATFram\log.h
 f429touchgfx\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-f429touchgfx\main.o: ../Core/Inc/cJSON.h
+f429touchgfx\main.o: ..\cJSON\cJSON.h
+f429touchgfx\main.o: ..\BSP\Inc\system.h

@@ -5,7 +5,7 @@ f429touchgfx\stm32touchcontroller.o: ../middlewares/st/touchgfx/framework/includ
 f429touchgfx\stm32touchcontroller.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 f429touchgfx\stm32touchcontroller.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 f429touchgfx\stm32touchcontroller.o: ../middlewares/st/touchgfx/framework/include/touchgfx/hal/Config.hpp
-f429touchgfx\stm32touchcontroller.o: ../Core/Inc/gt1151q_iic_driver.h
+f429touchgfx\stm32touchcontroller.o: ..\BSP\Inc\gt1151q_iic_driver.h
 f429touchgfx\stm32touchcontroller.o: ../Core/Inc/main.h
 f429touchgfx\stm32touchcontroller.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f429touchgfx\stm32touchcontroller.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -44,7 +44,7 @@ f429touchgfx\stm32touchcontroller.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4
 f429touchgfx\stm32touchcontroller.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f429touchgfx\stm32touchcontroller.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f429touchgfx\stm32touchcontroller.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-f429touchgfx\stm32touchcontroller.o: ../Core/Inc/delay.h
+f429touchgfx\stm32touchcontroller.o: ..\BSP\Inc\delay.h
 f429touchgfx\stm32touchcontroller.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 f429touchgfx\stm32touchcontroller.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 f429touchgfx\stm32touchcontroller.o: ../Core/Inc/FreeRTOSConfig.h

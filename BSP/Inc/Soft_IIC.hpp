@@ -30,6 +30,8 @@ class I2C
 		void sendACK(int select);
 		bool I2C_Write(uint8_t deviceAddress,uint8_t registerAddress,uint8_t *sendData,uint8_t dataNumber,uint32_t timeOut);
 		bool I2C_Read (uint8_t deviceAddress,uint8_t registerAddress,uint8_t *receiveBuffer,uint8_t dataNumber,uint32_t timeOut);
+		bool I2C_Read_Noreg(uint8_t deviceAddress,uint8_t *receiveBuffer,uint8_t dataNumber,uint32_t timeOut);
+		bool I2C::I2C_Write_Noreg(uint8_t deviceAddress,uint8_t *sendData,uint8_t dataNumber,uint32_t timeOut);
 
 	private:
 

@@ -1,5 +1,5 @@
-f429touchgfx\delay.o: ..\Core\Src\delay.c
-f429touchgfx\delay.o: ../Core/Inc/delay.h
+f429touchgfx\delay.o: ..\BSP\Src\delay.c
+f429touchgfx\delay.o: ..\BSP\Inc\delay.h
 f429touchgfx\delay.o: ../Core/Inc/main.h
 f429touchgfx\delay.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f429touchgfx\delay.o: ../Core/Inc/stm32f4xx_hal_conf.h

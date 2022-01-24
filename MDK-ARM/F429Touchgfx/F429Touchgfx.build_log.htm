@@ -22,25 +22,29 @@ Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
 D:\DoingProject\F429Touchgfx\MDK-ARM\F429Touchgfx.uvprojx
-Project File Date:  01/22/2022
+Project File Date:  01/24/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin'
 Build target 'F429Touchgfx'
 compiling main.c...
-../Core/Inc/delay.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Inc/gt1151q_iic_driver.h(47): warning:  #1-D: last line of file ends without a newline
+..\BSP\Inc\gt1151q_iic_driver.h(47): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\ATFram\log.h(51): warning:  #1-D: last line of file ends without a newline
   #endif
-../Core/Src/main.c: 3 warnings, 0 errors
+..\BSP\Inc\system.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/main.c(126): warning:  #223-D: function "update_sensor_value" declared implicitly
+  		update_sensor_value();
+../Core/Src/main.c(139): warning:  #111-D: statement is unreachable
+  	AT24CXX_Init();
+../Core/Src/main.c: 5 warnings, 0 errors
 linking...
 F429Touchgfx\F429Touchgfx.sct(21): warning: L6329W: Pattern *.o(ExtFlashSection) only matches removed unused sections.
-Program Size: Code=51586 RO-data=18146 RW-data=296 ZI-data=23288  
+Program Size: Code=37304 RO-data=16328 RW-data=244 ZI-data=7076  
 Finished: 0 information, 1 warning and 0 error messages.
 FromELF: creating hex file...
-"F429Touchgfx\F429Touchgfx.axf" - 0 Error(s), 4 Warning(s).
+"F429Touchgfx\F429Touchgfx.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 

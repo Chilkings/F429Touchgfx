@@ -639,7 +639,8 @@ uint8_t BMP280_Bh1750_Init(void)
 	BIIC_Init();
 	Bh1750_Init();
 	BMP280_Init();
-//	printf("\r\nBMP280 ID:0x%x\n\r", BMP280_ReadID());
+	
+	printf("\r\nBMP280 ID:0x%x\n\r", BMP280_ReadID());
 	delay_xms(1000);
 	return 1;
 }

@@ -1,11 +1,5 @@
 --cpu=Cortex-M4.fp.sp
 "f429touchgfx\startup_stm32f429xx.o"
-"f429touchgfx\ctiic.o"
-"f429touchgfx\gt1151q_iic_driver.o"
-"f429touchgfx\delay.o"
-"f429touchgfx\w25qxx.o"
-"f429touchgfx\my_bm280_bh1750.o"
-"f429touchgfx\24c02.o"
 "f429touchgfx\main.o"
 "f429touchgfx\gpio.o"
 "f429touchgfx\freertos.o"
@@ -20,7 +14,6 @@
 "f429touchgfx\stm32f4xx_it.o"
 "f429touchgfx\stm32f4xx_hal_msp.o"
 "f429touchgfx\stm32f4xx_hal_timebase_tim.o"
-"f429touchgfx\soft_iic.o"
 "f429touchgfx\stm32f4xx_hal_crc.o"
 "f429touchgfx\stm32f4xx_hal_rcc.o"
 "f429touchgfx\stm32f4xx_hal_rcc_ex.o"
@@ -101,7 +94,17 @@
 "f429touchgfx\hardware.o"
 "f429touchgfx\log.o"
 "f429touchgfx\cjson.o"
---nodebug --strict --scatter "F429Touchgfx\F429Touchgfx.sct"
+"f429touchgfx\24c02.o"
+"f429touchgfx\bh1750.o"
+"f429touchgfx\ctiic.o"
+"f429touchgfx\delay.o"
+"f429touchgfx\gt1151q_iic_driver.o"
+"f429touchgfx\my_bm280_bh1750.o"
+"f429touchgfx\soft_iic.o"
+"f429touchgfx\system.o"
+"f429touchgfx\w25qxx.o"
+"f429touchgfx\bmp280.o"
+--strict --scatter "F429Touchgfx\F429Touchgfx.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "F429Touchgfx.map" -o F429Touchgfx\F429Touchgfx.axf
