@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../TouchGFX/App;../TouchGFX/target/generated;../TouchGFX/target;../middlewares/st/touchgfx/framework/include;../touchgfx/generated/fonts/include;../touchgfx/generated/gui_generated/include;../touchgfx/generated/images/include;../touchgfx/generated/texts/include;../touchgfx/generated/videos/include;../touchgfx/gui/include;..\ATFram;..\cJSON;..\BSP\Inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../TouchGFX/App;../TouchGFX/target/generated;../TouchGFX/target;../middlewares/st/touchgfx/framework/include;../touchgfx/generated/fonts/include;../touchgfx/generated/gui_generated/include;../touchgfx/generated/images/include;../touchgfx/generated/texts/include;../touchgfx/generated/videos/include;../touchgfx/gui/include;..\BSP\Inc;..\Middlewares\Third_Party\ATFram;..\Middlewares\Third_Party\cJSON;..\Middlewares\Third_Party\soft_iic</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1557,22 +1557,22 @@
             <File>
               <FileName>AT.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\ATFram\AT.c</FilePath>
+              <FilePath>..\Middlewares\Third_Party\ATFram\AT.c</FilePath>
             </File>
             <File>
               <FileName>ATCommand.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\ATFram\ATCommand.c</FilePath>
+              <FilePath>..\Middlewares\Third_Party\ATFram\ATCommand.c</FilePath>
             </File>
             <File>
               <FileName>Hardware.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\ATFram\Hardware.c</FilePath>
+              <FilePath>..\Middlewares\Third_Party\ATFram\Hardware.c</FilePath>
             </File>
             <File>
               <FileName>log.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\ATFram\log.c</FilePath>
+              <FilePath>..\Middlewares\Third_Party\ATFram\log.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1582,7 +1582,7 @@
             <File>
               <FileName>cJSON.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\cJSON\cJSON.c</FilePath>
+              <FilePath>..\Middlewares\Third_Party\cJSON\cJSON.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1593,11 +1593,6 @@
               <FileName>24c02.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\Src\24c02.c</FilePath>
-            </File>
-            <File>
-              <FileName>BH1750.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\BSP\Src\BH1750.cpp</FilePath>
             </File>
             <File>
               <FileName>CTiic.c</FileName>
@@ -1620,11 +1615,6 @@
               <FilePath>..\BSP\Src\MY_Bm280_Bh1750.c</FilePath>
             </File>
             <File>
-              <FileName>Soft_IIC.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\BSP\Src\Soft_IIC.cpp</FilePath>
-            </File>
-            <File>
               <FileName>system.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\Src\system.c</FilePath>
@@ -1635,9 +1625,29 @@
               <FilePath>..\BSP\Src\w25qxx.c</FilePath>
             </File>
             <File>
-              <FileName>bmp280.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\BSP\Src\bmp280.cpp</FilePath>
+              <FileName>bh1750.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bh1750.c</FilePath>
+            </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bmp280.c</FilePath>
+            </File>
+            <File>
+              <FileName>mpu6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\mpu6050.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Middlewares/soft_iic</GroupName>
+          <Files>
+            <File>
+              <FileName>softI2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\soft_iic\softI2c.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -39,7 +39,7 @@ f429touchgfx\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_t
 f429touchgfx\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f429touchgfx\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 f429touchgfx\stm32f4xx_it.o: ../Core/Inc/stm32f4xx_it.h
-f429touchgfx\stm32f4xx_it.o: ..\ATFram\Hardware.h
+f429touchgfx\stm32f4xx_it.o: ..\Middlewares\Third_Party\ATFram\Hardware.h
 f429touchgfx\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 f429touchgfx\stm32f4xx_it.o: ../Core/Inc/FreeRTOSConfig.h
 f429touchgfx\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
@@ -48,10 +48,10 @@ f429touchgfx\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/
 f429touchgfx\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 f429touchgfx\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 f429touchgfx\stm32f4xx_it.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-f429touchgfx\stm32f4xx_it.o: ..\ATFram\AT.h
-f429touchgfx\stm32f4xx_it.o: ..\ATFram\Hardware.h
-f429touchgfx\stm32f4xx_it.o: ..\ATFram\ATCommand.h
-f429touchgfx\stm32f4xx_it.o: ..\ATFram\log.h
+f429touchgfx\stm32f4xx_it.o: ..\Middlewares\Third_Party\ATFram\AT.h
+f429touchgfx\stm32f4xx_it.o: ..\Middlewares\Third_Party\ATFram\Hardware.h
+f429touchgfx\stm32f4xx_it.o: ..\Middlewares\Third_Party\ATFram\ATCommand.h
+f429touchgfx\stm32f4xx_it.o: ..\Middlewares\Third_Party\ATFram\log.h
 f429touchgfx\stm32f4xx_it.o: ../Core/Inc/usart.h
 f429touchgfx\stm32f4xx_it.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 f429touchgfx\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h

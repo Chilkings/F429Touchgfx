@@ -2,13 +2,10 @@
 #define	_BH1750_I2C_DRV_H_
 
 #include "stm32f4xx_hal.h"
-#include "Soft_IIC.hpp"
 
 // address(7 bit) + read or write(1 bit)
-#define	BH1750_ADDR_WRITE	0x46 //0x23 <<1 & 0xEF
-#define	BH1750_ADDR_READ	0x47 //0x23<<1  | 0x01
-#define BH1750_ADDR       0x23 
-
+#define	BH1750_ADDR_WRITE	0x46
+#define	BH1750_ADDR_READ	0x47
 
 
 typedef enum
@@ -24,8 +21,8 @@ typedef enum
     ONCE_L_MODE		=	0x23	// Once low resolution mode2, measurement time 120ms
 } bh1750_mode_t;
 
-extern "C" int bh1750_init(void);
-extern "C" int bh1750_start(void);
-extern "C" int bh1750_read_lux(uint16_t *lux);
+int bh1750_init(void);
+void bh1750_start(void);
+int bh1750_read_lux(uint16_t *lux);
 
 #endif

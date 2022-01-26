@@ -53,17 +53,17 @@ f429touchgfx\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queu
 f429touchgfx\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 f429touchgfx\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 f429touchgfx\freertos.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-f429touchgfx\freertos.o: ..\ATFram\AT.h
-f429touchgfx\freertos.o: ..\ATFram\Hardware.h
+f429touchgfx\freertos.o: ..\Middlewares\Third_Party\ATFram\AT.h
+f429touchgfx\freertos.o: ..\Middlewares\Third_Party\ATFram\Hardware.h
 f429touchgfx\freertos.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-f429touchgfx\freertos.o: ..\ATFram\AT.h
+f429touchgfx\freertos.o: ..\Middlewares\Third_Party\ATFram\AT.h
 f429touchgfx\freertos.o: ../Core/Inc/usart.h
-f429touchgfx\freertos.o: ..\ATFram\ATCommand.h
-f429touchgfx\freertos.o: ..\ATFram\log.h
+f429touchgfx\freertos.o: ..\Middlewares\Third_Party\ATFram\ATCommand.h
+f429touchgfx\freertos.o: ..\Middlewares\Third_Party\ATFram\log.h
 f429touchgfx\freertos.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 f429touchgfx\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 f429touchgfx\freertos.o: ..\BSP\Inc\MY_Bm280_Bh1750.h
 f429touchgfx\freertos.o: ..\BSP\Inc\delay.h
 f429touchgfx\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 f429touchgfx\freertos.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
-f429touchgfx\freertos.o: ..\cJSON\cJSON.h
+f429touchgfx\freertos.o: ..\Middlewares\Third_Party\cJSON\cJSON.h

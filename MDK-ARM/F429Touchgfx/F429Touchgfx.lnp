@@ -95,15 +95,16 @@
 "f429touchgfx\log.o"
 "f429touchgfx\cjson.o"
 "f429touchgfx\24c02.o"
-"f429touchgfx\bh1750.o"
 "f429touchgfx\ctiic.o"
 "f429touchgfx\delay.o"
 "f429touchgfx\gt1151q_iic_driver.o"
 "f429touchgfx\my_bm280_bh1750.o"
-"f429touchgfx\soft_iic.o"
 "f429touchgfx\system.o"
 "f429touchgfx\w25qxx.o"
+"f429touchgfx\bh1750.o"
 "f429touchgfx\bmp280.o"
+"f429touchgfx\mpu6050.o"
+"f429touchgfx\softi2c.o"
 --strict --scatter "F429Touchgfx\F429Touchgfx.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

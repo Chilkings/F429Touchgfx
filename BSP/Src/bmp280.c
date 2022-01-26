@@ -26,12 +26,10 @@
  * THE SOFTWARE.
  */
 
-#include "bmp280.hpp"
+#include "bmp280.h"
 #include "main.h"
 #include "stdio.h"
-
-I2C bmp280I2C(IIC_SDA_GPIO_Port,IIC_SDA_Pin,IIC_SCL_GPIO_Port,IIC_SCL_Pin);
-BMP280_HandleTypedef bmp280;
+#include "softI2c.h"
 
 /**
  * BMP280 registers
@@ -55,6 +53,8 @@ BMP280_HandleTypedef bmp280;
 
 #define BMP280_RESET_VALUE     0xB6
 
+SFIIC_HandleTypeDef BMP280_I2C_HANDLE;
+BMP280_HandleTypedef bmp280;
 
 
 void bmp280_init_default_params(bmp280_params_t *params) {
@@ -69,10 +69,10 @@ void bmp280_init_default_params(bmp280_params_t *params) {
 static bool read_register16(BMP280_HandleTypedef *dev, uint8_t addr, uint16_t *value) {
 	uint16_t tx_buff;
 	uint8_t rx_buff[2];
-	tx_buff = dev->addr ;
+	tx_buff = (dev->addr << 1);
 
-	if (bmp280I2C.I2C_Read(tx_buff, addr, rx_buff, 2, 500)== true) 
-	{
+	if (BMP280_I2C_HANDLE.Mem_Read(&BMP280_I2C_HANDLE, tx_buff, addr, 1, rx_buff, 2, 5000)
+			== HAL_OK) {
 		*value = (uint16_t) ((rx_buff[1] << 8) | rx_buff[0]);
 		return true;
 	} else
@@ -80,11 +80,11 @@ static bool read_register16(BMP280_HandleTypedef *dev, uint8_t addr, uint16_t *v
 
 }
 
-static inline int read_data(BMP280_HandleTypedef *dev, uint8_t addr, uint8_t *value,uint8_t len) 
-{
+static inline int read_data(BMP280_HandleTypedef *dev, uint8_t addr, uint8_t *value,
+		uint8_t len) {
 	uint16_t tx_buff;
-	tx_buff = dev->addr; //传入的地址不需要修改，模拟iic里有操作
-	if (bmp280I2C.I2C_Read(tx_buff, addr, value, len, 500) == true)
+	tx_buff = (dev->addr << 1);
+	if (BMP280_I2C_HANDLE.Mem_Read(&BMP280_I2C_HANDLE, tx_buff, addr, 1, value, len, 5000) == HAL_OK)
 		return 0;
 	else
 		return 1;
@@ -134,9 +134,9 @@ static bool read_hum_calibration_data(BMP280_HandleTypedef *dev) {
 static int write_register8(BMP280_HandleTypedef *dev, uint8_t addr, uint8_t value) {
 	uint16_t tx_buff;
 
-	tx_buff = dev->addr;
-	
-	if (bmp280I2C.I2C_Write(tx_buff,addr,&value, 1,500) == true) 
+	tx_buff = (dev->addr << 1);
+
+	if (BMP280_I2C_HANDLE.Mem_Write(&BMP280_I2C_HANDLE, tx_buff, addr, 1, &value, 1, 10000) == HAL_OK)
 		return false;
 	else
 		return true;
@@ -153,16 +153,16 @@ bool bmp280_init(BMP280_HandleTypedef *dev, bmp280_params_t *params) {
 	if (read_data(dev, BMP280_REG_ID, &dev->id, 1)) {
 		return false;
 	}
+	
 	if (dev->id != BMP280_CHIP_ID && dev->id != BME280_CHIP_ID) {
 
 		return false;
 	}
-
+	
 	// Soft reset.
 	if (write_register8(dev, BMP280_REG_RESET, BMP280_RESET_VALUE)) {
 		return false;
 	}
-
 	// Wait until finished copying over the NVP data.
 	while (1) {
 		uint8_t status;
@@ -335,33 +335,41 @@ bool bmp280_read_fixed(BMP280_HandleTypedef *dev, int32_t *temperature, uint32_t
 	return true;
 }
 
-int bmp280_read_float( float *temperature, float *pressure,
+bool bmp280_read_float( float *temperature, float *pressure,
 		float *humidity) {
+	BMP280_HandleTypedef *dev = &bmp280;
 	int32_t fixed_temperature;
 	uint32_t fixed_pressure;
 	uint32_t fixed_humidity;
-	BMP280_HandleTypedef *dev = &bmp280; //add 
 	if (bmp280_read_fixed(dev, &fixed_temperature, &fixed_pressure,
 			humidity ? &fixed_humidity : NULL)) {
 		*temperature = (float) fixed_temperature / 100;
 		*pressure = (float) fixed_pressure / 256;
 		if (humidity)
 			*humidity = (float) fixed_humidity / 1024;
-		return 1;
+		return true;
 	}
 
-	return 0;
+	return false;
 }
 		
-int bmp280_start(void)
+void bmp280_start(void)
 {
+	BMP280_I2C_HANDLE.SDAPort = IIC_SDA_GPIO_Port;
+	BMP280_I2C_HANDLE.SDAPin = IIC_SDA_Pin;
+	BMP280_I2C_HANDLE.SCLPort = IIC_SCL_GPIO_Port;
+	BMP280_I2C_HANDLE.SCLPin = IIC_SCL_Pin;
+
+	BMP280_I2C_HANDLE.Init = softI2cInit; 
+	
+	BMP280_I2C_HANDLE.Init(&BMP280_I2C_HANDLE);
+	
 	bmp280_init_default_params(&bmp280.params);
 	bmp280.addr = BMP280_I2C_ADDRESS_0;
-	while (!bmp280_init(&bmp280, &bmp280.params)) {
-		printf("Start Failed bmp280\r\n");
-		HAL_Delay(1000);
-		return -1;
+	
+	if(!bmp280_init(&bmp280, &bmp280.params))
+	{
+		printf("bmp280 init failed\r\n");
 	}
-	printf("bmp280 chip id:0x%x\r\n",bmp280.id);
-	return 1;
+	printf("bmp280 ID:0x%x\r\n",bmp280.id);
 }

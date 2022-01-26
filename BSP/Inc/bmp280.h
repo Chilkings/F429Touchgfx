@@ -12,7 +12,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "stm32f4xx_hal.h"
-#include "Soft_IIC.hpp"
+
 /**
  * BMP280 or BME280 address is 0x77 if SDO pin is high, and is 0x76 if
  * SDO pin is low.
@@ -169,9 +169,12 @@ bool bmp280_read_fixed(BMP280_HandleTypedef *dev, int32_t *temperature,
  *  Humidity is optional and only read for the BME280, in percent relative
  *  humidity.
  */
-extern "C" int bmp280_read_float(float *temperature,
+bool bmp280_read_float(float *temperature,
                        float *pressure, float *humidity);
 
-extern "C" int bmp280_start(void);
+void bmp280_start(void);
+
+//extern BMP280_HandleTypedef bmp280;
+//extern SFIIC_HandleTypeDef BMP280_I2C_HANDLE;
 
 #endif  // __BMP280_H__

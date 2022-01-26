@@ -35,11 +35,14 @@
 /* USER CODE BEGIN Includes */
 #include "gt1151q_iic_driver.h"
 #include "w25qxx.h"
-#include "MY_Bm280_Bh1750.h"
+//#include "MY_Bm280_Bh1750.h"
 #include "24c02.h"
 #include "AT.h"
 #include "cJSON.h"
 #include "system.h"
+#include "bh1750.h"
+#include "bmp280.h"
+#include "mpu6050.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -120,22 +123,8 @@ int main(void)
 	
 	bh1750_start();  
 	bmp280_start();
-	
-	while(1)
-	{
-		update_sensor_value();
-		HAL_Delay(500);
-	}
-//	MPU6050_start();
-//	double mpu6050_x,mpu6050_y,mpu6050_z={0};
-//  while(1)
-//	{
-//		mpu6050_read_data(&mpu6050_x,&mpu6050_y,&mpu6050_z);
-//		printf("X:%.2f Y:%.2f Z:%.2f\r\n",mpu6050_x,mpu6050_y,mpu6050_z);
-//		HAL_Delay(200);
-//	}
-	
-	
+
+
 	AT24CXX_Init();
   ATFormInit();
 	
@@ -150,14 +139,13 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
-//  MX_FREERTOS_Init();
+  MX_FREERTOS_Init();
   /* Start scheduler */
-//  osKernelStart();
+  osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	//
   while (1)
   {
     /* USER CODE END WHILE */
