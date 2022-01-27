@@ -3,7 +3,8 @@
 #include "stm32f4xx_hal.h"
 #include "stdio.h"
 
-
+extern uint16_t bh1750_lux ;
+extern float bmp280_pressure,bmp280_temperature,bmp280_humidity;
 
 //extern uint16_t bh1750_lux;
 

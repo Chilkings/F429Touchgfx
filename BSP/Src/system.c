@@ -16,7 +16,6 @@ void update_sensor_value()
 //	printf("lux: %.2d\r\n",bh1750_lux);
 //	printf("Pressure: %.2f Pa, Temperature: %.2f C\r\n",bmp280_pressure, bmp280_temperature);
 //	printf("MPU6050 X:%f Y:%f Z:%f\r\n",MPU6050.Gyro_X_RAW,MPU6050.Accel_Y_RAW,MPU6050.Gyro_Z_RAW);
-	
 }
 
 //	mpu6050_start();

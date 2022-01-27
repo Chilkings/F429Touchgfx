@@ -28,8 +28,9 @@
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
 #include "AT.h"
-#include "MY_Bm280_Bh1750.h"
+//#include "MY_Bm280_Bh1750.h"
 #include "cJSON.h"
+#include "system.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -55,6 +56,7 @@ osThreadId defaultTaskHandle;
 osThreadId ATParseHandle;
 osThreadId ATFramHandle;
 osThreadId ATSendHandle;
+osThreadId SensorCollectHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -65,6 +67,7 @@ void StartDefaultTask(void const * argument);
 void StartATParse(void const * argument);
 void StartATFram(void const * argument);
 void StartATSend(void const * argument);
+void StartSensorCollect(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -120,12 +123,16 @@ void MX_FREERTOS_Init(void) {
   ATParseHandle = osThreadCreate(osThread(ATParse), NULL);
 
   /* definition and creation of ATFram */
-  osThreadDef(ATFram, StartATFram, osPriorityNormal, 0, 512);
+  osThreadDef(ATFram, StartATFram, osPriorityNormal, 0, 256);
   ATFramHandle = osThreadCreate(osThread(ATFram), NULL);
 
   /* definition and creation of ATSend */
   osThreadDef(ATSend, StartATSend, osPriorityLow, 0, 256);
   ATSendHandle = osThreadCreate(osThread(ATSend), NULL);
+
+  /* definition and creation of SensorCollect */
+  osThreadDef(SensorCollect, StartSensorCollect, osPriorityLow, 0, 128);
+  SensorCollectHandle = osThreadCreate(osThread(SensorCollect), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -143,7 +150,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-//	MX_TouchGFX_Process();
+	MX_TouchGFX_Process();
   /* Infinite loop */
   for(;;)
   {
@@ -242,24 +249,44 @@ void StartATSend(void const * argument)
 		cJSON* cjson_params = NULL;
 		cjson_root =  cJSON_CreateObject();
 		cjson_params  =  cJSON_CreateObject();
-		cJSON_AddNumberToObject(cjson_params,"CurrentTemperature",34);
+		cJSON_AddNumberToObject(cjson_params,"CurrentTemperature",bmp280_temperature);
 		cJSON_AddNumberToObject(cjson_params,"CurrentHumidity",(uint32_t)12);
-		cJSON_AddNumberToObject(cjson_params,"LightLux",(uint32_t)45);
-		cJSON_AddNumberToObject(cjson_params,"Atmosphere",(uint32_t)39);
+		cJSON_AddNumberToObject(cjson_params,"LightLux",(uint32_t)bh1750_lux);
+		cJSON_AddNumberToObject(cjson_params,"Atmosphere",(uint32_t)bmp280_pressure);
 		cJSON_AddNumberToObject(cjson_params,"lie",34);
 		cJSON_AddItemToObject(cjson_root,"params",cjson_params);
 		jsonRes = cJSON_Print(cjson_root);
+		sprintf(PubParam,"\"/sys/a1wocurZ0R0/M5311_1382/thing/event/property/post\",1,1,0,0,\"%s\"",jsonRes);
 //			printf("上报数据：%s\n\r",jsonRes);
 //			printf("AT+MQTTPUB=\"/sys/a1wocurZ0R0/M5311_1382/thing/event/property/post\",1,1,0,0,\"%s\"\r\n",jsonRes);
 		cJSON_Delete(cjson_root);				//删除Json数组
 		vPortFree(jsonRes);							//释放内存不释放就会出错
-		sprintf(PubParam,"\"/sys/a1wocurZ0R0/M5311_1382/thing/event/property/post\",1,1,0,0,\"%s\"",jsonRes);
+
 //		__LOG("上报数据：%s\r\n",PubParam);
 //			IOT_printf("%s\r\n",PubParam);
 		ATCommandRegister(MQTTPUB,WRITECMD,PubParam);
 
   }
   /* USER CODE END StartATSend */
+}
+
+/* USER CODE BEGIN Header_StartSensorCollect */
+/**
+* @brief Function implementing the SensorCollect thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartSensorCollect */
+void StartSensorCollect(void const * argument)
+{
+  /* USER CODE BEGIN StartSensorCollect */
+  /* Infinite loop */
+  for(;;)
+  {
+		update_sensor_value();
+    osDelay(1000);
+  }
+  /* USER CODE END StartSensorCollect */
 }
 
 /* Private application code --------------------------------------------------*/

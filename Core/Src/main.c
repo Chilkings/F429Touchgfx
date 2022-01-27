@@ -116,7 +116,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
   MX_TIM14_Init();
-//  MX_TouchGFX_Init();
+  MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 	GT1151_Init();
 	W25QXX_Init();

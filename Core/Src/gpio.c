@@ -76,10 +76,10 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOB, MPU_SDA_Pin|MPU_SCL_Pin|AIIC_SDA_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOD, LED5_Pin|Iot_Reset_Pin|IOTpower_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOD, Iot_Reset_Pin|IOTpower_Pin|Buzzer_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PIPin PIPin */
   GPIO_InitStruct.Pin = IIC_SDA_Pin|IIC_SCL_Pin;
