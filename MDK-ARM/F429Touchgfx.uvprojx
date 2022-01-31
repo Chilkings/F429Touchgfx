@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;  ../Drivers/STM32F4xx_HAL_Driver/Inc;  ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;  ../Middlewares/Third_Party/FreeRTOS/Source/include;  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;  ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;  ../Drivers/CMSIS/Include;  ../TouchGFX/App;  ../TouchGFX/target/generated;  ../TouchGFX/target;  ../middlewares/st/touchgfx/framework/include;  ../touchgfx/generated/fonts/include;  ../touchgfx/generated/gui_generated/include;  ../touchgfx/generated/images/include;  ../touchgfx/generated/texts/include;  ../touchgfx/generated/videos/include;  ../touchgfx/gui/include;  ..\BSP\Inc;  ..\Middlewares\Third_Party\ATFram;  ..\Middlewares\Third_Party\cJSON;  ..\Middlewares\Third_Party\soft_iic</IncludePath>
+              <IncludePath>../Core/Inc;      ../Drivers/STM32F4xx_HAL_Driver/Inc;      ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;      ../Middlewares/Third_Party/FreeRTOS/Source/include;      ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;      ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;      ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;      ../Drivers/CMSIS/Include;      ../BSP/Inc;      ../Middlewares/Third_Party/ATFram;      ../Middlewares/Third_Party/cJSON;      ../Middlewares/Third_Party/soft_iic; ../TouchGFX/App; ../TouchGFX/target/generated; ../TouchGFX/target;../middlewares/st/touchgfx/framework/include;../touchgfx/generated/fonts/include;../touchgfx/generated/gui_generated/include;../touchgfx/generated/images/include;../touchgfx/generated/texts/include;../touchgfx/generated/videos/include;../touchgfx/gui/include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -715,19 +715,19 @@
               <FilePath>../touchgfx/gui/src/common/frontendapplication.cpp</FilePath>
             </File>
             <File>
-              <FileName>MainPresenter.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/main_screen/mainpresenter.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>MainView.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/main_screen/mainview.cpp</FilePath>
-            </File>
-            <File>
               <FileName>Model.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/gui/src/model/model.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Screen1Presenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screen1_screen/screen1presenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Screen1View.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screen1_screen/screen1view.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -750,19 +750,69 @@
               <FilePath>../touchgfx/generated/fonts/src/cachedfont.cpp</FilePath>
             </File>
             <File>
+              <FileName>Font_comicbd_54_4bpp_0.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_comicbd_54_4bpp_0.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_phagspab_70_4bpp_0.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_phagspab_70_4bpp_0.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_SIMYOU_TTF_59_4bpp_0.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simyou_ttf_59_4bpp_0.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_SIMYOU_TTF_59_4bpp_11.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simyou_ttf_59_4bpp_11.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_SIMYOU_TTF_59_4bpp_12.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_simyou_ttf_59_4bpp_12.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_STHUPO_TTF_40_4bpp_0.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_sthupo_ttf_40_4bpp_0.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_STHUPO_TTF_40_4bpp_10.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_sthupo_ttf_40_4bpp_10.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_STHUPO_TTF_40_4bpp_11.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_sthupo_ttf_40_4bpp_11.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_STHUPO_TTF_40_4bpp_13.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_sthupo_ttf_40_4bpp_13.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_STHUPO_TTF_40_4bpp_14.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_sthupo_ttf_40_4bpp_14.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Font_verdana_10_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/font_verdana_10_4bpp_0.cpp</FilePath>
             </File>
             <File>
+              <FileName>Font_verdana_20_4bpp_0.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_verdana_20_4bpp_0.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Font_verdana_40_4bpp_0.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/font_verdana_40_4bpp_0.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font_verdana_80_4bpp_0.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_verdana_80_4bpp_0.cpp</FilePath>
             </File>
             <File>
               <FileName>FontCache.cpp</FileName>
@@ -785,29 +835,84 @@
               <FilePath>../touchgfx/generated/images/src/__designer/image_blue_backgrounds_main_bg_800x480px.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_Blue_Buttons_Round_Edge_small.cpp</FileName>
+              <FileName>image_formaldehyde.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_buttons_round_edge_small.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_formaldehyde.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_Blue_Buttons_Round_Edge_small_pressed.cpp</FileName>
+              <FileName>image_homepage.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_buttons_round_edge_small_pressed.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_homepage.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_Blue_Icons_Down_arrow_48.cpp</FileName>
+              <FileName>image_hum.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_icons_down_arrow_48.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_hum.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_Blue_Icons_Up_arrow_48.cpp</FileName>
+              <FileName>image_location.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_icons_up_arrow_48.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_location.cpp</FilePath>
             </File>
             <File>
-              <FileName>image_Blue_Textures_grey_wash_wall.cpp</FileName>
+              <FileName>image_lux.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_textures_grey_wash_wall.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/image_lux.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_me.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_me.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_nowifi.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_nowifi.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_pressure.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_pressure.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_SO2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_so2.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_temp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_temp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_testing.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_testing.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_wifi.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_wifi.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_comicbd_54_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_comicbd_54_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_phagspab_70_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_phagspab_70_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_SIMYOU_TTF_59_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_simyou_ttf_59_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_STHUPO_TTF_40_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_sthupo_ttf_40_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Kerning_verdana_10_4bpp.cpp</FileName>
@@ -815,14 +920,14 @@
               <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_10_4bpp.cpp</FilePath>
             </File>
             <File>
+              <FileName>Kerning_verdana_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Kerning_verdana_40_4bpp.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_40_4bpp.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Kerning_verdana_80_4bpp.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_80_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>LanguageGb.cpp</FileName>
@@ -830,9 +935,29 @@
               <FilePath>../touchgfx/generated/texts/src/languagegb.cpp</FilePath>
             </File>
             <File>
-              <FileName>MainViewBase.cpp</FileName>
+              <FileName>Screen1ViewBase.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/gui_generated/src/main_screen/mainviewbase.cpp</FilePath>
+              <FilePath>../touchgfx/generated/gui_generated/src/screen1_screen/screen1viewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_comicbd_54_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_comicbd_54_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_phagspab_70_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_phagspab_70_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_SIMYOU_TTF_59_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_simyou_ttf_59_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_STHUPO_TTF_40_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_sthupo_ttf_40_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Table_verdana_10_4bpp.cpp</FileName>
@@ -840,14 +965,14 @@
               <FilePath>../touchgfx/generated/fonts/src/table_verdana_10_4bpp.cpp</FilePath>
             </File>
             <File>
+              <FileName>Table_verdana_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_verdana_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Table_verdana_40_4bpp.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/table_verdana_40_4bpp.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Table_verdana_80_4bpp.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_verdana_80_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Texts.cpp</FileName>
@@ -878,6 +1003,106 @@
               <FileName>touchgfx_core.lib</FileName>
               <FileType>4</FileType>
               <FilePath>../middlewares/st/touchgfx/lib/core/cortex_m4f/Keil/touchgfx_core.lib</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Middlewares/ATFram</GroupName>
+          <Files>
+            <File>
+              <FileName>AT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\ATFram\AT.c</FilePath>
+            </File>
+            <File>
+              <FileName>ATCommand.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\ATFram\ATCommand.c</FilePath>
+            </File>
+            <File>
+              <FileName>Hardware.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\ATFram\Hardware.c</FilePath>
+            </File>
+            <File>
+              <FileName>log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\ATFram\log.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Middlewares/cJSON</GroupName>
+          <Files>
+            <File>
+              <FileName>cJSON.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\cJSON\cJSON.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Application/User/BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>24c02.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\24c02.c</FilePath>
+            </File>
+            <File>
+              <FileName>CTiic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\CTiic.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>gt1151q_iic_driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\gt1151q_iic_driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>MY_Bm280_Bh1750.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\MY_Bm280_Bh1750.c</FilePath>
+            </File>
+            <File>
+              <FileName>system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\system.c</FilePath>
+            </File>
+            <File>
+              <FileName>w25qxx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\w25qxx.c</FilePath>
+            </File>
+            <File>
+              <FileName>bh1750.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bh1750.c</FilePath>
+            </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bmp280.c</FilePath>
+            </File>
+            <File>
+              <FileName>mpu6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\mpu6050.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Middlewares/soft_iic</GroupName>
+          <Files>
+            <File>
+              <FileName>softI2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\soft_iic\softI2c.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1548,106 +1773,6 @@
                   </Cads>
                 </FileArmAds>
               </FileOption>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Middlewares/ATFram</GroupName>
-          <Files>
-            <File>
-              <FileName>AT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\Third_Party\ATFram\AT.c</FilePath>
-            </File>
-            <File>
-              <FileName>ATCommand.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\Third_Party\ATFram\ATCommand.c</FilePath>
-            </File>
-            <File>
-              <FileName>Hardware.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\Third_Party\ATFram\Hardware.c</FilePath>
-            </File>
-            <File>
-              <FileName>log.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\Third_Party\ATFram\log.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Middlewares/cJSON</GroupName>
-          <Files>
-            <File>
-              <FileName>cJSON.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\Third_Party\cJSON\cJSON.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Application/User/BSP</GroupName>
-          <Files>
-            <File>
-              <FileName>24c02.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\24c02.c</FilePath>
-            </File>
-            <File>
-              <FileName>CTiic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\CTiic.c</FilePath>
-            </File>
-            <File>
-              <FileName>delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>gt1151q_iic_driver.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\gt1151q_iic_driver.c</FilePath>
-            </File>
-            <File>
-              <FileName>MY_Bm280_Bh1750.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\MY_Bm280_Bh1750.c</FilePath>
-            </File>
-            <File>
-              <FileName>system.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\system.c</FilePath>
-            </File>
-            <File>
-              <FileName>w25qxx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\w25qxx.c</FilePath>
-            </File>
-            <File>
-              <FileName>bh1750.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\bh1750.c</FilePath>
-            </File>
-            <File>
-              <FileName>bmp280.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\bmp280.c</FilePath>
-            </File>
-            <File>
-              <FileName>mpu6050.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\mpu6050.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Middlewares/soft_iic</GroupName>
-          <Files>
-            <File>
-              <FileName>softI2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\Third_Party\soft_iic\softI2c.c</FilePath>
             </File>
           </Files>
         </Group>

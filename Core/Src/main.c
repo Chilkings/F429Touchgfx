@@ -116,8 +116,10 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
   MX_TIM14_Init();
+  MX_TIM13_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
+	HAL_TIM_Base_Start_IT(&htim13);
 	GT1151_Init();
 	W25QXX_Init();
 	
@@ -256,7 +258,20 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
-
+	if (htim->Instance == TIM13) {
+		if (++time_seconds >= 60)
+        {
+            time_seconds = 0;
+            if (++time_minutes >= 60)
+            {
+                time_minutes = 0;
+                if (++time_hours >= 24)
+                {
+                    time_hours = 0;
+                }
+            }
+        }
+  }
   /* USER CODE END Callback 1 */
 }
 

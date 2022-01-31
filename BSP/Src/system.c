@@ -6,6 +6,8 @@
 uint16_t bh1750_lux = {0};
 float bmp280_pressure,bmp280_temperature,bmp280_humidity={0};
 MPU6050_t MPU6050;
+int time_hours=12,time_minutes=0,time_seconds=0,time_years=2022,time_mouths=1,time_days =1;
+int isConnectNetwork=0;
 
 void update_sensor_value()
 {

@@ -62,24 +62,24 @@ f429touchgfx\main.o: ../Core/Inc/usart.h
 f429touchgfx\main.o: ../Core/Inc/gpio.h
 f429touchgfx\main.o: ../Core/Inc/fmc.h
 f429touchgfx\main.o: ../TouchGFX/App/app_touchgfx.h
-f429touchgfx\main.o: ..\BSP\Inc\gt1151q_iic_driver.h
-f429touchgfx\main.o: ..\BSP\Inc\delay.h
+f429touchgfx\main.o: ../BSP/Inc/gt1151q_iic_driver.h
+f429touchgfx\main.o: ../BSP/Inc/delay.h
 f429touchgfx\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 f429touchgfx\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 f429touchgfx\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-f429touchgfx\main.o: ..\BSP\Inc\w25qxx.h
-f429touchgfx\main.o: ..\BSP\Inc\24c02.h
-f429touchgfx\main.o: ..\Middlewares\Third_Party\ATFram\AT.h
-f429touchgfx\main.o: ..\Middlewares\Third_Party\ATFram\Hardware.h
-f429touchgfx\main.o: ..\Middlewares\Third_Party\ATFram\AT.h
-f429touchgfx\main.o: ..\Middlewares\Third_Party\ATFram\ATCommand.h
-f429touchgfx\main.o: ..\Middlewares\Third_Party\ATFram\log.h
+f429touchgfx\main.o: ../BSP/Inc/w25qxx.h
+f429touchgfx\main.o: ../BSP/Inc/24c02.h
+f429touchgfx\main.o: ../Middlewares/Third_Party/ATFram/AT.h
+f429touchgfx\main.o: ../Middlewares/Third_Party/ATFram/Hardware.h
+f429touchgfx\main.o: ../Middlewares/Third_Party/ATFram/AT.h
+f429touchgfx\main.o: ../Middlewares/Third_Party/ATFram/ATCommand.h
+f429touchgfx\main.o: ../Middlewares/Third_Party/ATFram/log.h
 f429touchgfx\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 f429touchgfx\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-f429touchgfx\main.o: ..\Middlewares\Third_Party\cJSON\cJSON.h
-f429touchgfx\main.o: ..\BSP\Inc\system.h
-f429touchgfx\main.o: ..\BSP\Inc\bh1750.h
-f429touchgfx\main.o: ..\BSP\Inc\bmp280.h
+f429touchgfx\main.o: ../Middlewares/Third_Party/cJSON/cJSON.h
+f429touchgfx\main.o: ../BSP/Inc/system.h
+f429touchgfx\main.o: ../BSP/Inc/bh1750.h
+f429touchgfx\main.o: ../BSP/Inc/bmp280.h
 f429touchgfx\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-f429touchgfx\main.o: ..\BSP\Inc\mpu6050.h
-f429touchgfx\main.o: ..\Middlewares\Third_Party\soft_iic\softI2c.h
+f429touchgfx\main.o: ../BSP/Inc/mpu6050.h
+f429touchgfx\main.o: ../Middlewares/Third_Party/soft_iic/softI2c.h

@@ -18,12 +18,6 @@
 /* USER CODE BEGIN STM32TouchController */
 
 #include <STM32TouchController.hpp>
-extern "C"
-{
-	#include "gt1151q_iic_driver.h"
-}
-
-
 
 void STM32TouchController::init()
 {
@@ -45,13 +39,6 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
      * By default sampleTouch is called every tick, this can be adjusted by HAL::setTouchSampleRate(int8_t);
      *
      */
-		if(Touch_Poll(&x,&y)) //传入指针，获取坐标值
-		{
-			return true; 
-		}
-		else 
-			return false;
-		
     return false;
 }
 

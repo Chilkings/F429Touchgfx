@@ -18,9 +18,9 @@
 
 /* USER CODE BEGIN TouchGFXHAL.cpp */
 
+#include "stm32f4xx.h"
 extern "C"
 {
-	#include "stm32f4xx.h"
 	#include "w25qxx.h"		
 }
 
@@ -35,10 +35,6 @@ void TouchGFXHAL::initialize()
     // Please note, HAL::initialize() must be called to initialize the framework.
 
     TouchGFXGeneratedHAL::initialize();
-    #ifndef	SIMULATOR
-		Bitmap::setCache((uint16_t *)0xc0300000,0xff0000,128);
-		Bitmap::cacheAll();
-	#endif
 }
 
 /**
@@ -103,7 +99,7 @@ bool TouchGFXHAL::blockCopy(void* RESTRICT dest, const void* RESTRICT src, uint3
             p = (uint32_t)src - 0x90000000 + (numBytes & 0xffff);
             for (uint32_t i = 0; i < (numBytes >> 16); i++)
             {
-                W25QXX_Read((uint8_t *)dest + (i * 0xffff),  p+ (i * 0xffff), 0xffff); //¶ÁÈ¡SPI_FLASHÄÚÈÝ
+                W25QXX_Read((uint8_t *)dest + (i * 0xffff),  p+ (i * 0xffff), 0xffff); //?¨¢¨¨?SPI_FLASH?¨²¨¨Y
             }
         }
 

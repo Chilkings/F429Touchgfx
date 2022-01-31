@@ -5,6 +5,9 @@
 #include "stdio.h"
 #include "cmsis_os.h"
 
+#include "system.h"
+#include "time.h"
+
 typedef struct 
 {
 	char* RxBuff;
@@ -40,6 +43,46 @@ ATStatus AT_Callback(char * str)
 
 ATStatus CCLK_Callback(char * str)
 {	
+	//+CCLK: 22/01/28,03:04:54+32
+//	time_years = ( (*(str+7)-'0')*10 + (*(str+8)-'0') + 2000);
+//	time_hours   = ( (*(str+16)-'0')*10 + (*(str+17)-'0') + 8) %24;
+//	time_minutes = (*(str+19)-'0')*10 + (*(str+20)-'0');
+//	time_seconds = (*(str+22)-'0')*10 + (*(str+23)-'0');
+	
+//	struct tm t; //标准时间
+//  struct tm *t2;//东八区时间
+//	
+//	t.tm_year = ( (*(str+7)-'0')*10 + (*(str+8)-'0') + 2000)-1900; 
+//	t.tm_mon =  (*(str+10)-'0')*10 + (*(str+11)-'0')-1;
+//	t.tm_mday = (*(str+13)-'0')*10 + (*(str+14)-'0');
+//	t.tm_hour = (*(str+16)-'0')*10 + (*(str+17)-'0');
+//	t.tm_min =  (*(str+19)-'0')*10 + (*(str+20)-'0');
+//	t.tm_sec =  (*(str+22)-'0')*10 + (*(str+23)-'0');
+//	
+//	time_t tt = mktime(&t);
+//	printf("tt value %d\r\n",tt);
+//	*t2 = *gmtime(&tt);
+//	
+//	time_years  =  t2->tm_year+1900;
+//	time_mouths =  t2->tm_mon+1;
+//	time_days   =  t2->tm_mday;
+//	time_hours   = t2->tm_hour;
+//	time_minutes = t2->tm_min;
+//	time_seconds = t2->tm_sec;	
+//	printf("%.4d-%.2d-%.2d %.2d:%.2d:%.2d", t2->tm_year + 1900,
+//    t2->tm_mon + 1, t2->tm_mday, t2->tm_hour, t2->tm_min,
+//    t2->tm_sec);
+//	printf("TIME is: %d:%d:%d:%d:%d:%d\r\n",time_years,time_mouths,time_days,time_hours,time_minutes,time_seconds);
+	
+	time_years = ( (*(str+7)-'0')*10 + (*(str+8)-'0') + 2000); 
+	time_mouths =  (*(str+10)-'0')*10 + (*(str+11)-'0');
+	time_days = (*(str+13)-'0')*10 + (*(str+14)-'0');
+	time_hours = ( (*(str+16)-'0')*10 + (*(str+17)-'0') + 8) %24;
+	time_minutes =  (*(str+19)-'0')*10 + (*(str+20)-'0');
+	time_seconds =  (*(str+22)-'0')*10 + (*(str+23)-'0');
+	
+//  printf("TIME is: %d:%d:%d:%d:%d:%d\r\n",time_years,time_mouths,time_days,time_hours,time_minutes,time_seconds);
+	isConnectNetwork = 1 ; //获取到时间，说明联网成功
 	return ATSUCCESS;
 }
 

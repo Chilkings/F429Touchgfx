@@ -7,11 +7,18 @@
 #include <touchgfx/Bitmap.hpp>
 
 const uint16_t BITMAP_BLUE_BACKGROUNDS_MAIN_BG_800X480PX_ID = 0;
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID = 1;
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID = 2;
-const uint16_t BITMAP_BLUE_ICONS_DOWN_ARROW_48_ID = 3;
-const uint16_t BITMAP_BLUE_ICONS_UP_ARROW_48_ID = 4;
-const uint16_t BITMAP_BLUE_TEXTURES_GREY_WASH_WALL_ID = 5;
+const uint16_t BITMAP_FORMALDEHYDE_ID = 1;
+const uint16_t BITMAP_HOMEPAGE_ID = 2;
+const uint16_t BITMAP_HUM_ID = 3;
+const uint16_t BITMAP_LOCATION_ID = 4;
+const uint16_t BITMAP_LUX_ID = 5;
+const uint16_t BITMAP_ME_ID = 6;
+const uint16_t BITMAP_NOWIFI_ID = 7;
+const uint16_t BITMAP_PRESSURE_ID = 8;
+const uint16_t BITMAP_SO2_ID = 9;
+const uint16_t BITMAP_TEMP_ID = 10;
+const uint16_t BITMAP_TESTING_ID = 11;
+const uint16_t BITMAP_WIFI_ID = 12;
 
 namespace BitmapDatabase
 {

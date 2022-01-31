@@ -1,5 +1,5 @@
 f429touchgfx\gt1151q_iic_driver.o: ..\BSP\Src\gt1151q_iic_driver.c
-f429touchgfx\gt1151q_iic_driver.o: ..\BSP\Inc\gt1151q_iic_driver.h
+f429touchgfx\gt1151q_iic_driver.o: ../BSP/Inc/gt1151q_iic_driver.h
 f429touchgfx\gt1151q_iic_driver.o: ../Core/Inc/main.h
 f429touchgfx\gt1151q_iic_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f429touchgfx\gt1151q_iic_driver.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -39,7 +39,7 @@ f429touchgfx\gt1151q_iic_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx
 f429touchgfx\gt1151q_iic_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f429touchgfx\gt1151q_iic_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f429touchgfx\gt1151q_iic_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-f429touchgfx\gt1151q_iic_driver.o: ..\BSP\Inc\delay.h
+f429touchgfx\gt1151q_iic_driver.o: ../BSP/Inc/delay.h
 f429touchgfx\gt1151q_iic_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 f429touchgfx\gt1151q_iic_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 f429touchgfx\gt1151q_iic_driver.o: ../Core/Inc/FreeRTOSConfig.h
@@ -56,4 +56,4 @@ f429touchgfx\gt1151q_iic_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/in
 f429touchgfx\gt1151q_iic_driver.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 f429touchgfx\gt1151q_iic_driver.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 f429touchgfx\gt1151q_iic_driver.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-f429touchgfx\gt1151q_iic_driver.o: ..\BSP\Inc\ctiic.h
+f429touchgfx\gt1151q_iic_driver.o: ../BSP/Inc/ctiic.h

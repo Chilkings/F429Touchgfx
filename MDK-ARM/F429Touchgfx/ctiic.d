@@ -1,5 +1,5 @@
 f429touchgfx\ctiic.o: ..\BSP\Src\CTiic.c
-f429touchgfx\ctiic.o: ..\BSP\Inc\CTiic.h
+f429touchgfx\ctiic.o: ../BSP/Inc/CTiic.h
 f429touchgfx\ctiic.o: ../Core/Inc/main.h
 f429touchgfx\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f429touchgfx\ctiic.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -39,7 +39,7 @@ f429touchgfx\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 f429touchgfx\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f429touchgfx\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f429touchgfx\ctiic.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-f429touchgfx\ctiic.o: ..\BSP\Inc\delay.h
+f429touchgfx\ctiic.o: ../BSP/Inc/delay.h
 f429touchgfx\ctiic.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 f429touchgfx\ctiic.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 f429touchgfx\ctiic.o: ../Core/Inc/FreeRTOSConfig.h

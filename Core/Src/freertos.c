@@ -235,7 +235,7 @@ void StartATSend(void const * argument)
 	ATCommandRegister(MQTTCFG,WRITECMD,"\"a1wocurZ0R0.iot-as-mqtt.cn-shanghai.aliyuncs.com\",1883,\"711382|securemode=3,signmethod=hmacsha1|\",\"60\",\"M5311_1382&a1wocurZ0R0\",\"A40C776AD48B66A8DB8A5EEE517625E2DB4501B4\",1");
 	ATCommandRegister(MQTTOPEN,WRITECMD,"1,1,0,0,0");
 	ATCommandRegister(MQTTSUB,WRITECMD,"/sys/a1wocurZ0R0/M5311_1382/thing/service/property/set");
-	
+	ATCommandRegister(CCLK,READCMD,NULL);
   /* Infinite loop */
   for(;;)
   {

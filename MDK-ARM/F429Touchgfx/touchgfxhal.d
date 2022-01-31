@@ -65,5 +65,5 @@ f429touchgfx\touchgfxhal.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sp
 f429touchgfx\touchgfxhal.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f429touchgfx\touchgfxhal.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f429touchgfx\touchgfxhal.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-f429touchgfx\touchgfxhal.o: ..\BSP\Inc\w25qxx.h
+f429touchgfx\touchgfxhal.o: ../BSP/Inc/w25qxx.h
 f429touchgfx\touchgfxhal.o: ../Core/Inc/main.h

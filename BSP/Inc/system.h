@@ -6,6 +6,9 @@
 extern uint16_t bh1750_lux ;
 extern float bmp280_pressure,bmp280_temperature,bmp280_humidity;
 
+extern int time_hours,time_minutes,time_seconds,time_years,time_mouths,time_days;
+extern int isConnectNetwork;
+
 //extern uint16_t bh1750_lux;
 
 //int MPU6050_start(void); //-1Ê§°Ü 1³É¹¦

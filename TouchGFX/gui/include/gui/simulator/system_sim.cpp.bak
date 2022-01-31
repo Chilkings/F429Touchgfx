@@ -1,0 +1,9 @@
+/*
+ * @Author: chilkings
+ * @Date: 2022-01-28 15:24:50
+ * @LastEditTime: 2022-01-28 15:25:06
+ * @Description: 
+ * @mail:chilkings.mail@gmail.com
+ */
+#include "system_sim.hpp"
+int time_hours,time_minutes,time_seconds,time_years,time_mouths,time_days;

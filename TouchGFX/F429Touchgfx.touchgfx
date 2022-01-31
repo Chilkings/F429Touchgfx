@@ -2,7 +2,7 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Main",
+        "Name": "Screen1",
         "Components": [
           {
             "Type": "Image",
@@ -13,91 +13,272 @@
             "RelativeFilename": "__designer\\Blue_Backgrounds_Main_bg_800x480px.png"
           },
           {
-            "Type": "ButtonWithIcon",
-            "Name": "buttonUp",
-            "X": 40,
-            "Y": 60,
-            "Width": 170,
-            "Height": 60,
-            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
-            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "IconPressed": "__designer\\Blue_Icons_Up_arrow_48.png",
-            "IconReleased": "__designer\\Blue_Icons_Up_arrow_48.png",
-            "IconX": 62,
-            "IconY": 17,
-            "IconHeight": 26,
-            "IconWidth": 46,
-            "ButtonStyle": "Style4",
-            "IconStyle": "Icon68"
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 451,
+            "Y": 36,
+            "Width": 244,
+            "Height": 65,
+            "LockPosition": true,
+            "TextId": "__SingleUse_KV0D",
+            "DisplaySeconds": true,
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 10,
+            "InitialMinute": 10
           },
           {
-            "Type": "ButtonWithIcon",
-            "Name": "buttonDown",
-            "X": 40,
-            "Y": 160,
-            "Width": 170,
-            "Height": 60,
-            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
-            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
-            "IconPressed": "__designer\\Blue_Icons_Down_arrow_48.png",
-            "IconReleased": "__designer\\Blue_Icons_Down_arrow_48.png",
-            "IconX": 62,
-            "IconY": 17,
-            "IconHeight": 26,
-            "IconWidth": 46,
-            "ButtonStyle": "Style4",
-            "IconStyle": "Icon14"
+            "Type": "TextArea",
+            "Name": "textAreaDate",
+            "X": 188,
+            "Y": 36,
+            "Width": 236,
+            "Height": 65,
+            "LockPosition": true,
+            "TextId": "__SingleUse_IQ9Q",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_WQ25",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Wildcard2": {
+              "TextId": "__SingleUse_SZDE",
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaYear",
+            "X": 11,
+            "Y": 36,
+            "Width": 177,
+            "Height": 65,
+            "LockPosition": true,
+            "TextId": "__SingleUse_P4UU",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_YQUF",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "Image",
-            "Name": "textCounter",
-            "X": 310,
-            "Y": 17,
-            "Width": 350,
-            "Height": 259,
-            "RelativeFilename": "__designer\\Blue_Textures_grey_wash_wall.png",
-            "Alpha": 226
+            "Name": "imageNetworkFalse",
+            "X": 712,
+            "Y": 37,
+            "Width": 64,
+            "Height": 64,
+            "RelativeFilename": "nowifi.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "imageNetworkTrue",
+            "X": 712,
+            "Y": 36,
+            "Width": 64,
+            "Height": 64,
+            "Visible": false,
+            "RelativeFilename": "wifi.png"
           },
           {
             "Type": "TextArea",
             "Name": "textArea1",
-            "X": 412,
-            "Y": 105,
-            "Width": 152,
-            "Height": 90,
-            "TextId": "__SingleUse_72HZ",
+            "X": 400,
+            "Y": 240,
+            "Width": 80,
+            "Height": 42,
+            "TextId": "__SingleUse_L1NF",
             "TextRotation": "0",
-            "Wildcard1": {
-              "TextId": "__SingleUse_W9Z0",
-              "UseBuffer": true,
-              "BufferSize": 10
-            }
-          }
-        ],
-        "Interactions": [
+            "AutoSize": true
+          },
           {
-            "InteractionName": "Interaction1",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonUp"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "buttonUpClicked"
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 40,
+            "Y": 417,
+            "Width": 80,
+            "Height": 42,
+            "TextId": "__SingleUse_KEIF",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea3",
+            "X": 40,
+            "Y": 240,
+            "Width": 80,
+            "Height": 42,
+            "TextId": "__SingleUse_B5SM",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea4",
+            "X": 400,
+            "Y": 417,
+            "Width": 80,
+            "Height": 42,
+            "TextId": "__SingleUse_IREN",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "imageTEMP",
+            "X": 16,
+            "Y": 112,
+            "Width": 128,
+            "Height": 128,
+            "RelativeFilename": "temp.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "imageHUM",
+            "X": 375,
+            "Y": 112,
+            "Width": 128,
+            "Height": 128,
+            "RelativeFilename": "hum.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "imagepreesure",
+            "X": 16,
+            "Y": 303,
+            "Width": 128,
+            "Height": 101,
+            "RelativeFilename": "pressure.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaTemp",
+            "X": 150,
+            "Y": 150,
+            "Width": 140,
+            "Height": 90,
+            "TextId": "__SingleUse_G3XM",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_YJRI",
+              "UseBuffer": true,
+              "BufferSize": 8
             }
           },
           {
-            "InteractionName": "Interaction2",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonDown"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "buttonDownClicked"
+            "Type": "TextArea",
+            "Name": "textAreaHum",
+            "X": 524,
+            "Y": 150,
+            "Width": 81,
+            "Height": 90,
+            "TextId": "__SingleUse_A89S",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_EZDK",
+              "UseBuffer": true,
+              "BufferSize": 4
             }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaPresssure",
+            "X": 150,
+            "Y": 308,
+            "Width": 220,
+            "Height": 90,
+            "TextId": "__SingleUse_C1Y0",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_KFEL",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea7",
+            "X": 290,
+            "Y": 191,
+            "Width": 70,
+            "Height": 42,
+            "TextId": "__SingleUse_PV86",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea8",
+            "X": 274,
+            "Y": 392,
+            "Width": 73,
+            "Height": 42,
+            "TextId": "__SingleUse_79ER",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea9",
+            "X": 605,
+            "Y": 191,
+            "Width": 37,
+            "Height": 42,
+            "TextId": "__SingleUse_UA88",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaLux",
+            "X": 524,
+            "Y": 308,
+            "Width": 161,
+            "Height": 90,
+            "TextId": "__SingleUse_DMOZ",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_E4VB",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea11",
+            "X": 590,
+            "Y": 398,
+            "Width": 56,
+            "Height": 42,
+            "TextId": "__SingleUse_1VUL",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "image2",
+            "X": 375,
+            "Y": 289,
+            "Width": 128,
+            "Height": 128,
+            "RelativeFilename": "lux.png"
           }
-        ]
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Screen2",
+        "Components": [],
+        "Interactions": []
       }
     ],
     "CustomContainerDefinitions": [],
@@ -107,7 +288,7 @@
       "Height": 480
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Main",
+    "StartupScreenName": "Screen1",
     "SelectedStartupLanguage": "GB",
     "Skin": "Blue",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
