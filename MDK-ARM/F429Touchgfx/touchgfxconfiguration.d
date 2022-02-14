@@ -33,13 +33,8 @@ f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/inclu
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/Container.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Callback.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Drawable.hpp
-f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/common/FrontendApplication.hpp
-f429touchgfx\touchgfxconfiguration.o: ../touchgfx/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
-f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/mvp/MVPApplication.hpp
-f429touchgfx\touchgfxconfiguration.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\new
-f429touchgfx\touchgfxconfiguration.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-f429touchgfx\touchgfxconfiguration.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\exception
-f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Screen.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/EasingEquations.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/hal/HAL.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/hal/BlitOp.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/hal/DMA.hpp
@@ -49,6 +44,15 @@ f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/inclu
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/platform/driver/button/ButtonController.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/platform/driver/touch/TouchController.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
+f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/common/FrontendApplication.hpp
+f429touchgfx\touchgfxconfiguration.o: ../touchgfx/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/mvp/MVPApplication.hpp
+f429touchgfx\touchgfxconfiguration.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\new
+f429touchgfx\touchgfxconfiguration.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+f429touchgfx\touchgfxconfiguration.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\exception
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Screen.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/model/Model.hpp
 f429touchgfx\touchgfxconfiguration.o: ../BSP/Inc/system.h
@@ -95,13 +99,20 @@ f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/inclu
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/screen1_screen/Screen1Presenter.hpp
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/model/ModelListener.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Box.hpp
-f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Button.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/generated/texts/include/texts/TextKeysAndLanguages.hpp
+f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/screencontrol_screen/ScreenControlView.hpp
+f429touchgfx\touchgfxconfiguration.o: ../touchgfx/generated/gui_generated/include/gui_generated/screencontrol_screen/ScreenControlViewBase.hpp
+f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/screencontrol_screen/ScreenControlPresenter.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/generated/images/include/BitmapDatabase.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Color.hpp

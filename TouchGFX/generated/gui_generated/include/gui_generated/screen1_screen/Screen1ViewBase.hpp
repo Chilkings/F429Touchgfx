@@ -12,6 +12,7 @@
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -51,6 +52,7 @@ protected:
     touchgfx::TextAreaWithOneWildcard textAreaLux;
     touchgfx::TextArea textArea11;
     touchgfx::Image image2;
+    touchgfx::ButtonWithIcon buttonWithIconControl;
 
     /*
      * Wildcard Buffers
@@ -71,6 +73,16 @@ protected:
     touchgfx::Unicode::UnicodeChar textAreaLuxBuffer[TEXTAREALUX_SIZE];
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

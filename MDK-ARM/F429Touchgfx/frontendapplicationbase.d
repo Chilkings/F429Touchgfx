@@ -83,6 +83,10 @@ f429touchgfx\frontendapplicationbase.o: ../touchgfx/generated/gui_generated/incl
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/common/Meta.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/common/Partition.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp
+f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp
+f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/EasingEquations.hpp
+f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp
+f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
 f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/common/FrontendApplication.hpp
 f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/screen1_screen/Screen1View.hpp
 f429touchgfx\frontendapplicationbase.o: ../touchgfx/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp
@@ -90,7 +94,6 @@ f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/inc
 f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/screen1_screen/Screen1Presenter.hpp
 f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/model/ModelListener.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Box.hpp
-f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/TypedText.hpp
@@ -98,7 +101,15 @@ f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/inc
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
+f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp
+f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Button.hpp
+f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 f429touchgfx\frontendapplicationbase.o: ../touchgfx/generated/texts/include/texts/TextKeysAndLanguages.hpp
+f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/screencontrol_screen/ScreenControlView.hpp
+f429touchgfx\frontendapplicationbase.o: ../touchgfx/generated/gui_generated/include/gui_generated/screencontrol_screen/ScreenControlViewBase.hpp
+f429touchgfx\frontendapplicationbase.o: ../touchgfx/gui/include/gui/screencontrol_screen/ScreenControlPresenter.hpp
+f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Color.hpp
 f429touchgfx\frontendapplicationbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp

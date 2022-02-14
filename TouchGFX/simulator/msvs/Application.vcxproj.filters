@@ -187,6 +187,18 @@
     <Filter Include="Header Files\gui\simulator">
       <UniqueIdentifier>ADB97AC1-9017-9ED9-F328-04EC757D9CAD</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\screencontrol_screen">
+      <UniqueIdentifier>2100AC99-CCAA-DA88-448C-425FD46DA357</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screencontrol_screen">
+      <UniqueIdentifier>4AA899F7-16ED-3DD8-F951-0C9A5B4A1153</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screencontrol_screen">
+      <UniqueIdentifier>617E03AE-E48C-4520-9FCD-1F0C44F7F9E4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screencontrol_screen">
+      <UniqueIdentifier>B3D7FBF2-5468-8147-E03B-97686853D116</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -227,6 +239,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screencontrol_screen\ScreenControlPresenter.cpp">
+      <Filter>Source Files\gui\screencontrol_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screencontrol_screen\ScreenControlView.cpp">
+      <Filter>Source Files\gui\screencontrol_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screencontrol_screen\ScreenControlViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screencontrol_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -678,6 +699,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screencontrol_screen\ScreenControlPresenter.hpp">
+      <Filter>Header Files\gui\screencontrol_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screencontrol_screen\ScreenControlView.hpp">
+      <Filter>Header Files\gui\screencontrol_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screencontrol_screen\ScreenControlViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screencontrol_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

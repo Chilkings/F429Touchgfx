@@ -181,6 +181,7 @@ void StartATParse(void const * argument)
 				xSemaphoreGive(ATSchRunSemaphore);/* ÊÍ·Å»¥³âÁ¿: ¿ªËø */
 			}
 		}
+		printf("dht temp:%d hum:%d \r\n",dht_temperature,dht_humidty);
   }
   /* USER CODE END StartATParse */
 }

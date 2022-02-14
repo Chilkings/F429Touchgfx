@@ -6,7 +6,8 @@
 #include <BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-Screen1ViewBase::Screen1ViewBase()
+Screen1ViewBase::Screen1ViewBase() :
+    buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler)
 {
 
     __background.setPosition(0, 0, 800, 480);
@@ -131,6 +132,11 @@ Screen1ViewBase::Screen1ViewBase()
     image2.setXY(375, 289);
     image2.setBitmap(touchgfx::Bitmap(BITMAP_LUX_ID));
 
+    buttonWithIconControl.setXY(712, 233);
+    buttonWithIconControl.setBitmaps(touchgfx::Bitmap(BITMAP_CONTROL_ID), touchgfx::Bitmap(BITMAP_CONTROL_ID), touchgfx::Bitmap(BITMAP_CONTROL_ID), touchgfx::Bitmap(BITMAP_CONTROL_ID));
+    buttonWithIconControl.setIconXY(0, 0);
+    buttonWithIconControl.setAction(buttonCallback);
+
     add(__background);
     add(image1);
     add(digitalClock1);
@@ -154,9 +160,21 @@ Screen1ViewBase::Screen1ViewBase()
     add(textAreaLux);
     add(textArea11);
     add(image2);
+    add(buttonWithIconControl);
 }
 
 void Screen1ViewBase::setupScreen()
 {
 
+}
+
+void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &buttonWithIconControl)
+    {
+        //Interaction1
+        //When buttonWithIconControl clicked change screen to ScreenControl
+        //Go to ScreenControl with screen transition towards East
+        application().gotoScreenControlScreenSlideTransitionEast();
+    }
 }

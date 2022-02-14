@@ -43,6 +43,7 @@
 #include "bh1750.h"
 #include "bmp280.h"
 #include "mpu6050.h"
+#include "mk_dht11.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -125,6 +126,8 @@ int main(void)
 	
 	bh1750_start();  
 	bmp280_start();
+	
+
 
 
 	AT24CXX_Init();

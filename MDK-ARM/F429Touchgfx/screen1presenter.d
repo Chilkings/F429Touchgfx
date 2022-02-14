@@ -93,4 +93,7 @@ f429touchgfx\screen1presenter.o: ../middlewares/st/touchgfx/framework/include/to
 f429touchgfx\screen1presenter.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp
 f429touchgfx\screen1presenter.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 f429touchgfx\screen1presenter.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
+f429touchgfx\screen1presenter.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp
+f429touchgfx\screen1presenter.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Button.hpp
+f429touchgfx\screen1presenter.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 f429touchgfx\screen1presenter.o: ../touchgfx/generated/texts/include/texts/TextKeysAndLanguages.hpp

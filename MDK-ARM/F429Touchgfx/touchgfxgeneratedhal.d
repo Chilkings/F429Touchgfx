@@ -39,6 +39,10 @@ f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/includ
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Application.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/Container.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Callback.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/EasingEquations.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/common/FrontendApplication.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/mvp/MVPApplication.hpp
@@ -92,7 +96,6 @@ f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/includ
 f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/screen1_screen/Screen1Presenter.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/model/ModelListener.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Box.hpp
-f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/TypedText.hpp
@@ -100,5 +103,13 @@ f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/includ
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Button.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/generated/texts/include/texts/TextKeysAndLanguages.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/screencontrol_screen/ScreenControlView.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/generated/gui_generated/include/gui_generated/screencontrol_screen/ScreenControlViewBase.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/screencontrol_screen/ScreenControlPresenter.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/hal/GPIO.hpp

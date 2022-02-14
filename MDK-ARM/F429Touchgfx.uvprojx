@@ -729,6 +729,16 @@
               <FileType>8</FileType>
               <FilePath>../touchgfx/gui/src/screen1_screen/screen1view.cpp</FilePath>
             </File>
+            <File>
+              <FileName>ScreenControlPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screencontrol_screen/screencontrolpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenControlView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screencontrol_screen/screencontrolview.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -790,6 +800,11 @@
               <FilePath>../touchgfx/generated/fonts/src/font_sthupo_ttf_40_4bpp_11.cpp</FilePath>
             </File>
             <File>
+              <FileName>Font_STHUPO_TTF_40_4bpp_12.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_sthupo_ttf_40_4bpp_12.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Font_STHUPO_TTF_40_4bpp_13.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/font_sthupo_ttf_40_4bpp_13.cpp</FilePath>
@@ -798,6 +813,11 @@
               <FileName>Font_STHUPO_TTF_40_4bpp_14.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/font_sthupo_ttf_40_4bpp_14.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_STHUPO_TTF_40_4bpp_9.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_sthupo_ttf_40_4bpp_9.cpp</FilePath>
             </File>
             <File>
               <FileName>Font_verdana_10_4bpp_0.cpp</FileName>
@@ -835,9 +855,39 @@
               <FilePath>../touchgfx/generated/images/src/__designer/image_blue_backgrounds_main_bg_800x480px.cpp</FilePath>
             </File>
             <File>
+              <FileName>image_Blue_Buttons_Round_Edge_small.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_buttons_round_edge_small.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_Blue_Buttons_Round_Edge_small_pressed.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_buttons_round_edge_small_pressed.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_Blue_Togglebars_Toggle_round_large_button_OFF.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_togglebars_toggle_round_large_button_off.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_Blue_Togglebars_Toggle_round_large_button_ON.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_togglebars_toggle_round_large_button_on.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_control.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_control.cpp</FilePath>
+            </File>
+            <File>
               <FileName>image_formaldehyde.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/image_formaldehyde.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_home.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_home.cpp</FilePath>
             </File>
             <File>
               <FileName>image_homepage.cpp</FileName>
@@ -938,6 +988,11 @@
               <FileName>Screen1ViewBase.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/gui_generated/src/screen1_screen/screen1viewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ScreenControlViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screencontrol_screen/screencontrolviewbase.cpp</FilePath>
             </File>
             <File>
               <FileName>Table_comicbd_54_4bpp.cpp</FileName>
@@ -1065,11 +1120,6 @@
               <FilePath>..\BSP\Src\gt1151q_iic_driver.c</FilePath>
             </File>
             <File>
-              <FileName>MY_Bm280_Bh1750.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\MY_Bm280_Bh1750.c</FilePath>
-            </File>
-            <File>
               <FileName>system.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\Src\system.c</FilePath>
@@ -1093,6 +1143,11 @@
               <FileName>mpu6050.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\Src\mpu6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>mk_dht11.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\mk_dht11.c</FilePath>
             </File>
           </Files>
         </Group>

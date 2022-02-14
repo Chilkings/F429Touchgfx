@@ -83,3 +83,4 @@ f429touchgfx\main.o: ../BSP/Inc/bmp280.h
 f429touchgfx\main.o: D:\Program Files (x86)\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 f429touchgfx\main.o: ../BSP/Inc/mpu6050.h
 f429touchgfx\main.o: ../Middlewares/Third_Party/soft_iic/softI2c.h
+f429touchgfx\main.o: ../BSP/Inc/mk_dht11.h

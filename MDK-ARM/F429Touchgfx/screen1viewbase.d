@@ -92,6 +92,9 @@ f429touchgfx\screen1viewbase.o: ../middlewares/st/touchgfx/framework/include/tou
 f429touchgfx\screen1viewbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp
 f429touchgfx\screen1viewbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 f429touchgfx\screen1viewbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
+f429touchgfx\screen1viewbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp
+f429touchgfx\screen1viewbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/Button.hpp
+f429touchgfx\screen1viewbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 f429touchgfx\screen1viewbase.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Color.hpp
 f429touchgfx\screen1viewbase.o: ../touchgfx/generated/images/include/BitmapDatabase.hpp
 f429touchgfx\screen1viewbase.o: ../touchgfx/generated/texts/include/texts/TextKeysAndLanguages.hpp
