@@ -3,7 +3,7 @@
 <title>Static Call Graph - [F429Touchgfx\F429Touchgfx.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image F429Touchgfx\F429Touchgfx.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Feb 14 22:23:02 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Feb 15 14:36:51 2022
 <BR><P>
 <H3>Maximum Stack Usage =       1024 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -3602,7 +3602,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[2d9]"></a>MX_TIM14_Init</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, tim.o(i.MX_TIM14_Init))
+<P><STRONG><a name="[2d9]"></a>MX_TIM14_Init</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, tim.o(i.MX_TIM14_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = MX_TIM14_Init &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
@@ -4154,7 +4154,7 @@ Global Symbols
 <P><STRONG><a name="[d7]"></a>Screen1View::tearDownScreen()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, screen1view.o(i._ZN11Screen1View14tearDownScreenEv))
 <BR>[Address Reference Count : 1]<UL><LI> screen1view.o(.constdata__ZTV11Screen1View)
 </UL>
-<P><STRONG><a name="[db]"></a>Screen1View::handleTickEvent()</STRONG> (Thumb, 438 bytes, Stack size 8 bytes, screen1view.o(i._ZN11Screen1View15handleTickEventEv))
+<P><STRONG><a name="[db]"></a>Screen1View::handleTickEvent()</STRONG> (Thumb, 474 bytes, Stack size 8 bytes, screen1view.o(i._ZN11Screen1View15handleTickEventEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 468<LI>Call Chain = Screen1View::handleTickEvent() &rArr; touchgfx::Unicode::snprintfFloat(unsigned short*, unsigned short, const char*, float) &rArr; touchgfx::Unicode::snprintfFloats(unsigned short*, unsigned short, const char*, const float*) &rArr; touchgfx::Unicode::snprintfFloats(unsigned short*, unsigned short, const unsigned short*, const char*, const float*) &rArr; touchgfx::Unicode::parseFlagsAndPrecision(const unsigned short*&, const char*&, unsigned short&, bool&, bool&, bool&, bool&, int&, bool&, int&)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::Drawable::invalidate() const

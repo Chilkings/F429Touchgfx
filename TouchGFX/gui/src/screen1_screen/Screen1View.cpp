@@ -57,11 +57,11 @@ void Screen1View::handleTickEvent()
 			
 				Unicode::snprintf(textAreaLuxBuffer, TEXTAREALUX_SIZE, "%d", lux);
 				Unicode::snprintfFloat(textAreaTempBuffer, TEXTAREATEMP_SIZE, "%4.2f", (float)temp);
-//				Unicode::snprintfFloat(textAreaHumBuffer, TEXTAREAHUM_SIZE, "%.1f", hum);
+				Unicode::snprintfFloat(textAreaHumBuffer, TEXTAREAHUM_SIZE, "%.1f", hum);
 				Unicode::snprintfFloat(textAreaPresssureBuffer, TEXTAREAPRESSSURE_SIZE, "%0.2f", (float)pressure);
 				
 				textAreaTemp.invalidate();
-//				textAreaHum.invalidate();
+				textAreaHum.invalidate();
 				textAreaPresssure.invalidate();
 				textAreaLux.invalidate();
 		}

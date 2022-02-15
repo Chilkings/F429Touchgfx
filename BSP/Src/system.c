@@ -4,7 +4,7 @@
 #include "mpu6050.h"
 #include "mk_dht11.h"
 
-extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim14;
 
 uint16_t bh1750_lux = {0};
 float bmp280_pressure,bmp280_temperature,bmp280_humidity={0};
@@ -15,7 +15,7 @@ int dht_temperature,dht_humidty;
 dht11_t dht={
 	GPIOC,
 	GPIO_PIN_4,
-	&htim1
+	&htim14
 };
 
 

@@ -74,7 +74,7 @@ public:
 		
 		float getHum()
 		{
-			return bmp280_humidity;
+			return dht_humidty;
 		}
 protected:
     ModelListener* modelListener;
