@@ -1,7 +1,7 @@
 Dependencies for Project 'F429Touchgfx', Target 'F429Touchgfx': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (startup_stm32f429xx.s)(0x620A7096)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I ..\Core\Inc-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"--pd "__UVISION_VERSION SETA 533" --pd "_RTE_ SETA 1" --pd "STM32F429xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f429xx.lst --xref -o f429touchgfx\startup_stm32f429xx.o --depend f429touchgfx\startup_stm32f429xx.d)
-F (../Core/Src/main.c)(0x620A7093)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\main.o --omf_browse f429touchgfx\main.crf --depend f429touchgfx\main.d)
+F (../Core/Src/main.c)(0x6222DF0A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\main.o --omf_browse f429touchgfx\main.crf --depend f429touchgfx\main.d)
 I (../Core/Inc/main.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
@@ -76,7 +76,7 @@ I (../Middlewares/Third_Party/ATFram/ATCommand.h)(0x61E7A449)
 I (../Middlewares/Third_Party/ATFram/log.h)(0x61EC216D)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E2EB2)
 I (../Middlewares/Third_Party/cJSON/cJSON.h)(0x617274A3)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../BSP/Inc/bh1750.h)(0x61F1270D)
 I (../BSP/Inc/bmp280.h)(0x61F12739)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
@@ -123,7 +123,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x6096557E)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6096557E)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6096557E)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6096557E)
-F (../Core/Src/freertos.c)(0x620B45EF)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\freertos.o --omf_browse f429touchgfx\freertos.crf --depend f429touchgfx\freertos.d)
+F (../Core/Src/freertos.c)(0x6222DF0A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\freertos.o --omf_browse f429touchgfx\freertos.crf --depend f429touchgfx\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6096556A)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
@@ -185,7 +185,7 @@ I (../Middlewares/Third_Party/ATFram/ATCommand.h)(0x61E7A449)
 I (../Middlewares/Third_Party/ATFram/log.h)(0x61EC216D)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E2EB2)
 I (../Middlewares/Third_Party/cJSON/cJSON.h)(0x617274A3)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 F (../Core/Src/crc.c)(0x620A7091)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\crc.o --omf_browse f429touchgfx\crc.crf --depend f429touchgfx\crc.d)
 I (../Core/Inc/crc.h)(0x620A7091)
 I (../Core/Inc/main.h)(0x620A7093)
@@ -1781,7 +1781,7 @@ I (../middlewares/st/touchgfx/framework/include/common/AbstractPartition.hpp)(0x
 I (../middlewares/st/touchgfx/framework/include/mvp/MVPHeap.hpp)(0x61976F5D)
 I (../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp)(0x61976F5D)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -1820,7 +1820,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6096557E)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
 F (../touchgfx/gui/src/model/model.cpp)(0x61F2C18C)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\model.o --omf_browse f429touchgfx\model.crf --depend f429touchgfx\model.d)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -1905,7 +1905,7 @@ I (../middlewares/st/touchgfx/framework/include/common/AbstractPartition.hpp)(0x
 I (../middlewares/st/touchgfx/framework/include/mvp/MVPHeap.hpp)(0x61976F5D)
 I (../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp)(0x61976F5D)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -2003,7 +2003,7 @@ I (../middlewares/st/touchgfx/framework/include/common/AbstractPartition.hpp)(0x
 I (../middlewares/st/touchgfx/framework/include/mvp/MVPHeap.hpp)(0x61976F5D)
 I (../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp)(0x61976F5D)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -2102,7 +2102,7 @@ I (../middlewares/st/touchgfx/framework/include/common/AbstractPartition.hpp)(0x
 I (../middlewares/st/touchgfx/framework/include/mvp/MVPHeap.hpp)(0x61976F5D)
 I (../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp)(0x61976F5D)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -2198,7 +2198,7 @@ I (../middlewares/st/touchgfx/framework/include/common/AbstractPartition.hpp)(0x
 I (../middlewares/st/touchgfx/framework/include/mvp/MVPHeap.hpp)(0x61976F5D)
 I (../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp)(0x61976F5D)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -2426,7 +2426,7 @@ I (../middlewares/st/touchgfx/framework/include/common/AbstractPartition.hpp)(0x
 I (../middlewares/st/touchgfx/framework/include/mvp/MVPHeap.hpp)(0x61976F5D)
 I (../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp)(0x61976F5D)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -2653,7 +2653,7 @@ I (../middlewares/st/touchgfx/framework/include/common/AbstractPartition.hpp)(0x
 I (../middlewares/st/touchgfx/framework/include/mvp/MVPHeap.hpp)(0x61976F5D)
 I (../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp)(0x61976F5D)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -2752,7 +2752,7 @@ I (../middlewares/st/touchgfx/framework/include/common/AbstractPartition.hpp)(0x
 I (../middlewares/st/touchgfx/framework/include/mvp/MVPHeap.hpp)(0x61976F5D)
 I (../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp)(0x61976F5D)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -3055,7 +3055,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x6096556A)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x6096556A)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x6096556A)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\time.h)(0x5E8E2EB2)
 F (..\Middlewares\Third_Party\ATFram\Hardware.c)(0x61EC1D3A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\hardware.o --omf_browse f429touchgfx\hardware.crf --depend f429touchgfx\hardware.d)
 I (..\Middlewares\Third_Party\ATFram\Hardware.h)(0x61E2D22F)
@@ -3404,8 +3404,8 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x6096556A
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
 I (../BSP/Inc/ctiic.h)(0x61976F59)
-F (..\BSP\Src\system.c)(0x620B4621)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\system.o --omf_browse f429touchgfx\system.crf --depend f429touchgfx\system.d)
-I (../BSP/Inc/system.h)(0x620A6585)
+F (..\BSP\Src\system.c)(0x6223092D)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\system.o --omf_browse f429touchgfx\system.crf --depend f429touchgfx\system.d)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -3593,7 +3593,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6096557E)
 I (../Core/Inc/main.h)(0x620A7093)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
 I (../Middlewares/Third_Party/soft_iic/softI2c.h)(0x61F15F8B)
-F (..\BSP\Src\mpu6050.c)(0x61F27728)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\mpu6050.o --omf_browse f429touchgfx\mpu6050.crf --depend f429touchgfx\mpu6050.d)
+F (..\BSP\Src\mpu6050.c)(0x6222DC22)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/Inc -I ../Middlewares/Third_Party/ATFram -I ../Middlewares/Third_Party/cJSON -I ../Middlewares/Third_Party/soft_iic -I ../TouchGFX/App -I ../TouchGFX/target/generated -I ../TouchGFX/target -I ../middlewares/st/touchgfx/framework/include -I ../touchgfx/generated/fonts/include -I ../touchgfx/generated/gui_generated/include -I ../touchgfx/generated/images/include -I ../touchgfx/generated/texts/include -I ../touchgfx/generated/videos/include -I ../touchgfx/gui/include-I.\RTE\_F429Touchgfx-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include"-I"D:\Program Files (x86)\Keil_v5\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F429xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F429xx-o f429touchgfx\mpu6050.o --omf_browse f429touchgfx\mpu6050.crf --depend f429touchgfx\mpu6050.d)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
 I (../BSP/Inc/mpu6050.h)(0x61F14104)
 I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
@@ -3920,7 +3920,7 @@ I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\exception)(0x5E8E2EB2)
 I (../middlewares/st/touchgfx/framework/include/touchgfx/Screen.hpp)(0x61976F5D)
 I (../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp)(0x61976F5D)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)
@@ -4039,7 +4039,7 @@ I (D:\Program Files (x86)\Keil_v5\ARM\ARMCC\include\exception)(0x5E8E2EB2)
 I (../middlewares/st/touchgfx/framework/include/touchgfx/Screen.hpp)(0x61976F5D)
 I (../middlewares/st/touchgfx/framework/include/mvp/Presenter.hpp)(0x61976F5D)
 I (../touchgfx/gui/include/gui/model/Model.hpp)(0x620B47D0)
-I (../BSP/Inc/system.h)(0x620A6585)
+I (../BSP/Inc/system.h)(0x6223092D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6096557E)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x620A7093)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6096557E)

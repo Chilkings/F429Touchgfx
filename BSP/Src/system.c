@@ -4,6 +4,8 @@
 #include "mpu6050.h"
 #include "mk_dht11.h"
 
+
+
 extern TIM_HandleTypeDef htim14;
 
 uint16_t bh1750_lux = {0};
@@ -23,24 +25,22 @@ void update_sensor_value()
 {
 	bh1750_read_lux(&bh1750_lux);
 	bmp280_read_float(&bmp280_temperature, &bmp280_pressure, &bmp280_humidity);
-//	MPU6050_Read_All(&MPU6050_I2C_HANDLE, &MPU6050);
+	HAL_Delay(10);//±‹√‚ ±–ÚŒ Ã‚
+	MPU6050_Read_All(&MPU6050_I2C_HANDLE, &MPU6050);
 //	MPU6050_Read_Gyro(&MPU6050_I2C_HANDLE, &MPU6050);
 //	printf("lux: %.2d\r\n",bh1750_lux);
 //	printf("Pressure: %.2f Pa, Temperature: %.2f C\r\n",bmp280_pressure, bmp280_temperature);
-//	printf("MPU6050 X:%f Y:%f Z:%f\r\n",MPU6050.Gyro_X_RAW,MPU6050.Accel_Y_RAW,MPU6050.Gyro_Z_RAW);
+	printf("MPU6050 X:%f Y:%f Z:%f\r\n",MPU6050.KalmanAngleX,MPU6050.KalmanAngleY,MPU6050.Gz);
 	readDHT11(&dht);
 	dht_temperature = dht.temperature;
 	dht_humidty = dht.humidty;
-  
 }
 
-//	mpu6050_start();
-//	while(1)
-//	{
-//		  uint8_t dat=0;
-//		  SFIIC_Mem_Read(&MPU6050_I2C_HANDLE, 0xD0, 0x75, 1, &dat, 1, 0xFFFF);
-//			printf("mpu6050 ID:0x%x\r\n",dat);
-//			HAL_Delay(100);
-//	}
+void alarm_led_buzzer()
+{
+		HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_SET);
+		osDelay(1000);
+		HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_RESET);
+}
 
 

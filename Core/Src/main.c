@@ -126,7 +126,7 @@ int main(void)
 	
 	bh1750_start();  
 	bmp280_start();
-	
+	mpu6050_start();
 
 
 

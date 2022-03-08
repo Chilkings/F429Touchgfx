@@ -181,7 +181,7 @@ void StartATParse(void const * argument)
 				xSemaphoreGive(ATSchRunSemaphore);/* ÊÍ·Å»¥³âÁ¿: ¿ªËø */
 			}
 		}
-		printf("dht temp:%d hum:%d \r\n",dht_temperature,dht_humidty);
+//		printf("dht temp:%d hum:%d \r\n",dht_temperature,dht_humidty);
   }
   /* USER CODE END StartATParse */
 }
@@ -250,11 +250,11 @@ void StartATSend(void const * argument)
 		cJSON* cjson_params = NULL;
 		cjson_root =  cJSON_CreateObject();
 		cjson_params  =  cJSON_CreateObject();
-		cJSON_AddNumberToObject(cjson_params,"CurrentTemperature",bmp280_temperature);
-		cJSON_AddNumberToObject(cjson_params,"CurrentHumidity",(uint32_t)12);
-		cJSON_AddNumberToObject(cjson_params,"LightLux",(uint32_t)bh1750_lux);
+		cJSON_AddNumberToObject(cjson_params,"CurrentTemperature",(float)(((int)(bmp280_temperature*100))/100));
+		cJSON_AddNumberToObject(cjson_params,"CurrentHumidity",(uint32_t)dht_humidty);
+		cJSON_AddNumberToObject(cjson_params,"LightLux",bh1750_lux);
 		cJSON_AddNumberToObject(cjson_params,"Atmosphere",(uint32_t)bmp280_pressure);
-		cJSON_AddNumberToObject(cjson_params,"lie",34);
+//		cJSON_AddNumberToObject(cjson_params,"lie",34);
 		cJSON_AddItemToObject(cjson_root,"params",cjson_params);
 		jsonRes = cJSON_Print(cjson_root);
 		sprintf(PubParam,"\"/sys/a1wocurZ0R0/M5311_1382/thing/event/property/post\",1,1,0,0,\"%s\"",jsonRes);
