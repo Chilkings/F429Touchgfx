@@ -75,9 +75,13 @@ void PrintIotRxData(void)
 	UartRXBuff[RXDataLength]='\0';
 	__LOG("Receive Data(length = %d):%s\r\n",RXDataLength,UartRXBuff);
 	
+	
 	__HAL_DMA_DISABLE(&_UART_DMA_HANDLE);
 
 }
+
+
+
 
 void MoudleResst(void)
 {

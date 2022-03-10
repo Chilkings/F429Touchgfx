@@ -50,7 +50,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-
+char Cjsondata[250];
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId ATParseHandle;
@@ -150,7 +150,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-	MX_TouchGFX_Process();
+//	MX_TouchGFX_Process();
   /* Infinite loop */
   for(;;)
   {
@@ -177,8 +177,39 @@ void StartATParse(void const * argument)
 		{
 			if(xSemaphoreTake(ATSchRunSemaphore,( TickType_t ) 10)==pdTRUE) //获得互斥量:上锁 
 			{
-				PrintIotRxData();
-				xSemaphoreGive(ATSchRunSemaphore);/* 释放互斥量: 开锁 */
+//				PrintIotRxData();
+					char *p=NULL;
+					BaseType_t xResult;
+					uint32_t RXDataLength=0;
+					xResult=xSemaphoreTake(ATRXCplSemaphore,pdMS_TO_TICKS(1000));
+					if(xResult != pdPASS)
+					{	
+						xSemaphoreGive(ATSchRunSemaphore);/* 释放互斥量: 开锁 */
+						continue;
+					}
+					else 
+					{
+						printf("接收到数据\r\n");
+					}
+					RXDataLength=0;
+					RXDataLength  = _UART_RXBUFFSIZE - __HAL_DMA_GET_COUNTER(&_UART_DMA_HANDLE); 
+					UartRXBuff[RXDataLength]='\0';
+					__LOG("Receive Data(length = %d):%s\r\n",RXDataLength,UartRXBuff);
+					
+					p=strstr((char *)UartRXBuff,"items");
+					if(p)
+					{
+						strcpy(Cjsondata,p+7);
+						Cjsondata[strlen(Cjsondata)-3]='\0';//字符串末尾存在\r\n两个看不见的字符
+						printf("THE JSON DATA IS: \r\n%s,数据长：%d\r\n",Cjsondata,strlen(Cjsondata));
+						CJSON_analysis(Cjsondata);
+					}
+					
+					__HAL_DMA_DISABLE(&_UART_DMA_HANDLE);
+
+				
+				
+				  xSemaphoreGive(ATSchRunSemaphore);/* 释放互斥量: 开锁 */
 			}
 		}
 //		printf("dht temp:%d hum:%d \r\n",dht_temperature,dht_humidty);
@@ -241,7 +272,8 @@ void StartATSend(void const * argument)
   for(;;)
   {
 		osDelay(10000);
-//		osDelay(10000);
+		osDelay(10000);
+		osDelay(10000);
 		while(uxQueueSpacesAvailable(ATcmdQueue)!=10)//等待队列为空
 		{
 			osDelay(100);

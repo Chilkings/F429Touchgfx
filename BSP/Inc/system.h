@@ -15,9 +15,9 @@
 												 else if(state == 1)	HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, GPIO_PIN_SET);	}
 #define LED4_T		HAL_GPIO_TogglePin(LED4_GPIO_Port, LED4_Pin)	
 
-#define	LED5(state)	state == 0?HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, GPIO_PIN_RESET):\
-										HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, GPIO_PIN_SET);
-#define LED5_T		HAL_GPIO_TogglePin(LED5_GPIO_Port, LED5_Pin)	
+#define	LED5(state)	{if(state == 0)					HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, GPIO_PIN_SET);\
+												 else if(state == 1)	HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, GPIO_PIN_RESET);	}
+#define LED5_T		HAL_GPIO_TogglePin(LED5_GPIO_Port, LED5_Pin)					
 
 
 
@@ -35,4 +35,5 @@ extern int dht_temperature,dht_humidty;
 
 void update_sensor_value(void);
 void alarm_led_buzzer(void);
+void CJSON_analysis(char * str);
 #endif
