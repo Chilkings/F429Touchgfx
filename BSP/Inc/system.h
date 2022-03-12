@@ -19,8 +19,10 @@
 												 else if(state == 1)	HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, GPIO_PIN_RESET);	}
 #define LED5_T		HAL_GPIO_TogglePin(LED5_GPIO_Port, LED5_Pin)					
 
-
-
+#define	RELAY1(state)	{if(state == 0)					HAL_GPIO_WritePin(Relay1_GPIO_Port, Relay1_Pin, GPIO_PIN_SET);\
+												 else if(state == 1)	HAL_GPIO_WritePin(Relay1_GPIO_Port, Relay1_Pin, GPIO_PIN_RESET);	}
+#define	RELAY2(state)	{if(state == 0)					HAL_GPIO_WritePin(Relay2_GPIO_Port, Relay2_Pin, GPIO_PIN_SET);\
+												 else if(state == 1)	HAL_GPIO_WritePin(Relay2_GPIO_Port, Relay2_Pin, GPIO_PIN_RESET);	}
 
 
 extern uint16_t bh1750_lux ;

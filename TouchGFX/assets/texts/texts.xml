@@ -67,17 +67,20 @@
     <Text Id="__SingleUse_EZDK" TypographyId="Typography_num" Alignment="Left" Direction="LTR">
       <Translation Language="GB">98</Translation>
     </Text>
-    <Text Id="__SingleUse_CXV5" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">New Text</Translation>
-    </Text>
-    <Text Id="__SingleUse_RYIA" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">New Text</Translation>
-    </Text>
-    <Text Id="__SingleUse_ZCA6" TypographyId="Default" Alignment="Center" Direction="LTR">
-      <Translation Language="GB">New Text</Translation>
-    </Text>
     <Text Id="__SingleUse_AY95" TypographyId="Typography_Large" Alignment="Left" Direction="LTR">
       <Translation Language="GB">控制中心</Translation>
+    </Text>
+    <Text Id="__SingleUse_A8T7" TypographyId="Typography_Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">开关1</Translation>
+    </Text>
+    <Text Id="__SingleUse_YDKV" TypographyId="Typography_Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">开关2</Translation>
+    </Text>
+    <Text Id="__SingleUse_79WG" TypographyId="Typography_Large" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">开关3</Translation>
+    </Text>
+    <Text Id="__SingleUse_BWVY" TypographyId="Typography_Large" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">2</Translation>
     </Text>
   </Texts>
   <Typographies>
@@ -86,7 +89,7 @@
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" FallbackCharacter="?" />
     <Typography Id="Typography_time" Font="comicbd.ttf" Size="54" Bpp="4" FallbackCharacter="?" />
     <Typography Id="Typography_cn" Font="SIMYOU.TTF" Size="59" Bpp="4" FallbackCharacter="?" WildcardCharacters="年月日" WidgetWildcardCharacters="0123456789 :APM" />
-    <Typography Id="Typography_Large" Font="STHUPO.TTF" Size="40" Bpp="4" FallbackCharacter="?" WildcardCharacters="控制中心温湿度光照.0123456789LuxKpa%°C" />
+    <Typography Id="Typography_Large" Font="STHUPO.TTF" Size="40" Bpp="4" FallbackCharacter="?" WildcardCharacters="开关控制中心温湿度光照.0123456789LuxKpa%°C" />
     <Typography Id="Typography_num" Font="phagspab.ttf" Size="70" Bpp="4" FallbackCharacter="?" WildcardCharacters="1234567890." />
   </Typographies>
 </TextDatabase>

@@ -13,56 +13,104 @@ ScreenControlViewBase::ScreenControlViewBase() :
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
+    swipeContainer1.setXY(0, 0);
+    swipeContainer1.setSwipeCutoff(50);
+    swipeContainer1.setEndSwipeElasticWidth(50);
+
+    swipeContainer1Page1.setWidth(800);
+    swipeContainer1Page1.setHeight(480);
+
     image1.setXY(0, 0);
     image1.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_BACKGROUNDS_MAIN_BG_800X480PX_ID));
+    swipeContainer1Page1.add(image1);
 
-    buttonWithLabel1.setXY(93, 107);
-    buttonWithLabel1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    buttonWithLabel1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_CXV5));
-    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    toggleButtonRelay1.setXY(336, 150);
+    toggleButtonRelay1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    toggleButtonRelay1.setAction(buttonCallback);
+    swipeContainer1Page1.add(toggleButtonRelay1);
 
-    toggleButton1.setXY(510, 118);
-    toggleButton1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
-
-    buttonWithLabel2.setXY(93, 206);
-    buttonWithLabel2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    buttonWithLabel2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_RYIA));
-    buttonWithLabel2.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel2.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-
-    buttonWithLabel3.setXY(93, 314);
-    buttonWithLabel3.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    buttonWithLabel3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_ZCA6));
-    buttonWithLabel3.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel3.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-
-    toggleButton2.setXY(510, 217);
-    toggleButton2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
-
-    toggleButton3.setXY(510, 325);
-    toggleButton3.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    toggleButtonRelay3.setXY(336, 330);
+    toggleButtonRelay3.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    toggleButtonRelay3.setAction(buttonCallback);
+    swipeContainer1Page1.add(toggleButtonRelay3);
 
     textArea1.setXY(320, 31);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AY95));
+    swipeContainer1Page1.add(textArea1);
 
     buttonWithIconHome.setXY(29, 20);
     buttonWithIconHome.setBitmaps(touchgfx::Bitmap(BITMAP_HOME_ID), touchgfx::Bitmap(BITMAP_HOME_ID), touchgfx::Bitmap(BITMAP_HOME_ID), touchgfx::Bitmap(BITMAP_HOME_ID));
     buttonWithIconHome.setIconXY(0, 0);
     buttonWithIconHome.setAction(buttonCallback);
+    swipeContainer1Page1.add(buttonWithIconHome);
+
+    textArea2.setXY(89, 146);
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2.setLinespacing(0);
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_A8T7));
+    swipeContainer1Page1.add(textArea2);
+
+    textArea2_1.setXY(89, 238);
+    textArea2_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2_1.setLinespacing(0);
+    textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YDKV));
+    swipeContainer1Page1.add(textArea2_1);
+
+    textArea2_1_1.setXY(89, 328);
+    textArea2_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2_1_1.setLinespacing(0);
+    textArea2_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_79WG));
+    swipeContainer1Page1.add(textArea2_1_1);
+
+    bulbYellow2.setXY(595, 219);
+    bulbYellow2.setVisible(false);
+    bulbYellow2.setBitmap(touchgfx::Bitmap(BITMAP_PEARE_GUL_ID));
+    swipeContainer1Page1.add(bulbYellow2);
+
+    bulpWhite2.setXY(595, 219);
+    bulpWhite2.setBitmap(touchgfx::Bitmap(BITMAP_PEARE_HVID_ID));
+    swipeContainer1Page1.add(bulpWhite2);
+
+    bulpWhite3.setXY(595, 309);
+    bulpWhite3.setBitmap(touchgfx::Bitmap(BITMAP_PEARE_HVID_ID));
+    swipeContainer1Page1.add(bulpWhite3);
+
+    bulbYellow1.setXY(595, 129);
+    bulbYellow1.setVisible(false);
+    bulbYellow1.setBitmap(touchgfx::Bitmap(BITMAP_PEARE_GUL_ID));
+    swipeContainer1Page1.add(bulbYellow1);
+
+    bulbYellow3.setXY(595, 310);
+    bulbYellow3.setVisible(false);
+    bulbYellow3.setBitmap(touchgfx::Bitmap(BITMAP_PEARE_GUL_ID));
+    swipeContainer1Page1.add(bulbYellow3);
+
+    toggleButtonRelay2.setXY(336, 240);
+    toggleButtonRelay2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    toggleButtonRelay2.setAction(buttonCallback);
+    swipeContainer1Page1.add(toggleButtonRelay2);
+
+    bulpWhite1.setXY(595, 129);
+    bulpWhite1.setBitmap(touchgfx::Bitmap(BITMAP_PEARE_HVID_ID));
+    swipeContainer1Page1.add(bulpWhite1);
+    swipeContainer1.add(swipeContainer1Page1);
+
+    swipeContainer1Page2.setWidth(800);
+    swipeContainer1Page2.setHeight(480);
+
+    buttonWithLabel1.setXY(315, 218);
+    buttonWithLabel1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonWithLabel1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_BWVY));
+    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    swipeContainer1Page2.add(buttonWithLabel1);
+    swipeContainer1.add(swipeContainer1Page2);
+    swipeContainer1.setSelectedPage(0);
 
     add(__background);
-    add(image1);
-    add(buttonWithLabel1);
-    add(toggleButton1);
-    add(buttonWithLabel2);
-    add(buttonWithLabel3);
-    add(toggleButton2);
-    add(toggleButton3);
-    add(textArea1);
-    add(buttonWithIconHome);
+    add(swipeContainer1);
 }
 
 void ScreenControlViewBase::setupScreen()
@@ -72,11 +120,32 @@ void ScreenControlViewBase::setupScreen()
 
 void ScreenControlViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &buttonWithIconHome)
+    if (&src == &toggleButtonRelay1)
+    {
+        //InteractionRelay1
+        //When toggleButtonRelay1 clicked call virtual function
+        //Call functionRelay1
+        functionRelay1();
+    }
+    else if (&src == &toggleButtonRelay3)
+    {
+        //InteractionRelay3
+        //When toggleButtonRelay3 clicked call virtual function
+        //Call functionRelay3
+        functionRelay3();
+    }
+    else if (&src == &buttonWithIconHome)
     {
         //Interaction1
         //When buttonWithIconHome clicked change screen to Screen1
         //Go to Screen1 with screen transition towards East
         application().gotoScreen1ScreenSlideTransitionEast();
+    }
+    else if (&src == &toggleButtonRelay2)
+    {
+        //InteractionRelay2
+        //When toggleButtonRelay2 clicked call virtual function
+        //Call functionRelay2
+        functionRelay2();
     }
 }

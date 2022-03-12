@@ -11,6 +11,10 @@ public:
     virtual ~ScreenControlView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+			
+		virtual void functionRelay1();
+		virtual void functionRelay2();
+		virtual void functionRelay3();
 protected:
 };
 

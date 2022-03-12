@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;      ../Drivers/STM32F4xx_HAL_Driver/Inc;      ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;      ../Middlewares/Third_Party/FreeRTOS/Source/include;      ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;      ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;      ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;      ../Drivers/CMSIS/Include;      ../BSP/Inc;      ../Middlewares/Third_Party/ATFram;      ../Middlewares/Third_Party/cJSON;      ../Middlewares/Third_Party/soft_iic; ../TouchGFX/App; ../TouchGFX/target/generated; ../TouchGFX/target;../middlewares/st/touchgfx/framework/include;../touchgfx/generated/fonts/include;../touchgfx/generated/gui_generated/include;../touchgfx/generated/images/include;../touchgfx/generated/texts/include;../touchgfx/generated/videos/include;../touchgfx/gui/include</IncludePath>
+              <IncludePath>../Core/Inc;        ../Drivers/STM32F4xx_HAL_Driver/Inc;        ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;        ../Middlewares/Third_Party/FreeRTOS/Source/include;        ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;        ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;        ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;        ../Drivers/CMSIS/Include;        ../BSP/Inc;        ../Middlewares/Third_Party/ATFram;        ../Middlewares/Third_Party/cJSON;        ../Middlewares/Third_Party/soft_iic;   ../TouchGFX/App;   ../TouchGFX/target/generated;   ../TouchGFX/target;../middlewares/st/touchgfx/framework/include;../touchgfx/generated/fonts/include;../touchgfx/generated/gui_generated/include;../touchgfx/generated/images/include;../touchgfx/generated/texts/include;../touchgfx/generated/videos/include;../touchgfx/gui/include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -865,6 +865,16 @@
               <FilePath>../touchgfx/generated/images/src/__designer/image_blue_buttons_round_edge_small_pressed.cpp</FilePath>
             </File>
             <File>
+              <FileName>image_Blue_PageIndicator_dot_indicator_small_highlight.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_pageindicator_dot_indicator_small_highlight.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_Blue_PageIndicator_dot_indicator_small_normal.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__designer/image_blue_pageindicator_dot_indicator_small_normal.cpp</FilePath>
+            </File>
+            <File>
               <FileName>image_Blue_Togglebars_Toggle_round_large_button_OFF.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/__designer/image_blue_togglebars_toggle_round_large_button_off.cpp</FilePath>
@@ -918,6 +928,16 @@
               <FileName>image_nowifi.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/image_nowifi.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_peare_gul.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_peare_gul.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image_peare_hvid.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/image_peare_hvid.cpp</FilePath>
             </File>
             <File>
               <FileName>image_pressure.cpp</FileName>

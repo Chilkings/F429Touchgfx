@@ -110,6 +110,9 @@ f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/generated/texts/include/texts/T
 f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/screencontrol_screen/ScreenControlView.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/generated/gui_generated/include/gui_generated/screencontrol_screen/ScreenControlViewBase.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../touchgfx/gui/include/gui/screencontrol_screen/ScreenControlPresenter.hpp
-f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp
+f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
 f429touchgfx\touchgfxgeneratedhal.o: ../middlewares/st/touchgfx/framework/include/touchgfx/hal/GPIO.hpp

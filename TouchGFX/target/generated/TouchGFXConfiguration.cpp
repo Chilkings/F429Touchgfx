@@ -52,7 +52,7 @@ void touchgfx_init()
    * Initialize TouchGFX
    */
   hal.initialize();
-	
+  	
 	#ifndef	SIMULATOR
 		Bitmap::setCache((uint16_t *)0xc0300000,0xff0000,128);
 		Bitmap::cacheAll();

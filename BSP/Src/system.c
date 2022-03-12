@@ -4,6 +4,8 @@
 #include "mpu6050.h"
 #include "mk_dht11.h"
 #include "cJSON.h"
+#include "log.h"
+
 
 
 extern TIM_HandleTypeDef htim14;
@@ -45,28 +47,39 @@ void alarm_led_buzzer()
 
 void CJSON_analysis(char * str)
 {
-	uint8_t Relay1=0;
+	uint8_t Relay=0;
 	cJSON* cjson_all = NULL;
 	cJSON* cjson_Relay1_all = NULL;
 	cJSON* cjson_Relay1_value = NULL;
+	cJSON* cjson_Relay2_all = NULL;
+	cJSON* cjson_Relay2_value = NULL;
 	cjson_all = cJSON_Parse(str);
 	if(cjson_all == NULL)
 	{
-		printf("\r\nparse fail.\n");
+		__LOG("\r\nparse fail.\n");
 		return ;
 	}
 	else 
-		printf("\r\nparse success\r\n");
+		__LOG("\r\nparse success\r\n");
 	
 	cjson_Relay1_all = cJSON_GetObjectItem(cjson_all,"Relay1");
 	if(cjson_Relay1_all!=NULL)
 	{
 			cjson_Relay1_value = cJSON_GetObjectItem(cjson_Relay1_all,"value");
-	    Relay1 = cjson_Relay1_value->valueint;
-		  LED5(Relay1);
-	    printf("RELAY1: %d\r\n",Relay1);
+	    Relay = cjson_Relay1_value->valueint;
+		  LED5(Relay);
+		  RELAY1(Relay);
+	    __LOG("RELAY1: %d\r\n",Relay);
 	}
 
-	
+	cjson_Relay2_all = cJSON_GetObjectItem(cjson_all,"Relay2");
+	if(cjson_Relay2_all!=NULL)
+	{
+			cjson_Relay2_value = cJSON_GetObjectItem(cjson_Relay2_all,"value");
+	    Relay = cjson_Relay2_value->valueint;
+		  LED5(Relay);
+		  RELAY2(Relay);
+	    __LOG("RELAY2: %d\r\n",Relay);
+	}
 	cJSON_Delete(cjson_all);
 }

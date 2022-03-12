@@ -111,8 +111,11 @@ f429touchgfx\touchgfxconfiguration.o: ../touchgfx/generated/texts/include/texts/
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/screencontrol_screen/ScreenControlView.hpp
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/generated/gui_generated/include/gui_generated/screencontrol_screen/ScreenControlViewBase.hpp
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/gui/include/gui/screencontrol_screen/ScreenControlPresenter.hpp
-f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp
+f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
 f429touchgfx\touchgfxconfiguration.o: ../touchgfx/generated/images/include/BitmapDatabase.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp
 f429touchgfx\touchgfxconfiguration.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Color.hpp

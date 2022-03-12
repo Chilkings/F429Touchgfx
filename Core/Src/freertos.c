@@ -150,7 +150,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-//	MX_TouchGFX_Process();
+	MX_TouchGFX_Process();
   /* Infinite loop */
   for(;;)
   {

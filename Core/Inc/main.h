@@ -85,6 +85,10 @@ void Error_Handler(void);
 #define LCD_BL_GPIO_Port GPIOA
 #define Magnet_Pin GPIO_PIN_5
 #define Magnet_GPIO_Port GPIOC
+#define Relay1_Pin GPIO_PIN_0
+#define Relay1_GPIO_Port GPIOB
+#define Relay2_Pin GPIO_PIN_1
+#define Relay2_GPIO_Port GPIOB
 #define TFT_I2C_SDA_Pin GPIO_PIN_6
 #define TFT_I2C_SDA_GPIO_Port GPIOH
 #define Key4_Pin GPIO_PIN_7

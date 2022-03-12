@@ -8,11 +8,13 @@
 #include <mvp/View.hpp>
 #include <gui/screencontrol_screen/ScreenControlPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/containers/SwipeContainer.hpp>
+#include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class ScreenControlViewBase : public touchgfx::View<ScreenControlPresenter>
 {
@@ -20,6 +22,24 @@ public:
     ScreenControlViewBase();
     virtual ~ScreenControlViewBase() {}
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void functionRelay1()
+    {
+        // Override and implement this function in ScreenControl
+    }
+
+    virtual void functionRelay2()
+    {
+        // Override and implement this function in ScreenControl
+    }
+
+    virtual void functionRelay3()
+    {
+        // Override and implement this function in ScreenControl
+    }
 
 protected:
     FrontendApplication& application() {
@@ -30,15 +50,25 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::SwipeContainer swipeContainer1;
+    touchgfx::Container swipeContainer1Page1;
     touchgfx::Image image1;
-    touchgfx::ButtonWithLabel buttonWithLabel1;
-    touchgfx::ToggleButton toggleButton1;
-    touchgfx::ButtonWithLabel buttonWithLabel2;
-    touchgfx::ButtonWithLabel buttonWithLabel3;
-    touchgfx::ToggleButton toggleButton2;
-    touchgfx::ToggleButton toggleButton3;
+    touchgfx::ToggleButton toggleButtonRelay1;
+    touchgfx::ToggleButton toggleButtonRelay3;
     touchgfx::TextArea textArea1;
     touchgfx::ButtonWithIcon buttonWithIconHome;
+    touchgfx::TextArea textArea2;
+    touchgfx::TextArea textArea2_1;
+    touchgfx::TextArea textArea2_1_1;
+    touchgfx::Image bulbYellow2;
+    touchgfx::Image bulpWhite2;
+    touchgfx::Image bulpWhite3;
+    touchgfx::Image bulbYellow1;
+    touchgfx::Image bulbYellow3;
+    touchgfx::ToggleButton toggleButtonRelay2;
+    touchgfx::Image bulpWhite1;
+    touchgfx::Container swipeContainer1Page2;
+    touchgfx::ButtonWithLabel buttonWithLabel1;
 
 private:
 

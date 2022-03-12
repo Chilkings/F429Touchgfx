@@ -75,3 +75,6 @@ void Screen1View::handleTickEvent()
 			isConnectNetwork = 0;
 		}
 }
+
+
+

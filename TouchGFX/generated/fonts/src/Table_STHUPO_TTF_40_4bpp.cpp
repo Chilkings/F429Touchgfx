@@ -27,11 +27,13 @@ KEEP extern const touchgfx::GlyphNode glyphs_STHUPO_TTF_40_4bpp[] FONT_TABLE_LOC
     {  5219, 0x00B0,  14,  14,  31,   3,  40,   0,   0, 0x00 },
     {     0, 0x4E2D,  34,  38,  31,   3,  40,   0,   0, 0x00 },
     {     0, 0x5149,  39,  38,  31,   1,  40,   0,   0, 0x00 },
-    {   760, 0x5236,  37,  38,  31,   2,  40,   0,   0, 0x00 },
-    {  1482, 0x538B,  37,  37,  30,   2,  40,   0,   0, 0x00 },
+    {   760, 0x5173,  38,  38,  31,   2,  40,   0,   0, 0x00 },
+    {  1482, 0x5236,  37,  38,  31,   2,  40,   0,   0, 0x00 },
+    {  2204, 0x538B,  37,  37,  30,   2,  40,   0,   0, 0x00 },
     {     0, 0x5EA6,  38,  38,  31,   1,  40,   0,   0, 0x00 },
-    {   722, 0x5F3A,  38,  37,  30,   1,  40,   0,   0, 0x00 },
-    {  1425, 0x5FC3,  39,  38,  31,   1,  40,   0,   0, 0x00 },
+    {   722, 0x5F00,  38,  36,  29,   1,  40,   0,   0, 0x00 },
+    {  1406, 0x5F3A,  38,  37,  30,   1,  40,   0,   0, 0x00 },
+    {  2109, 0x5FC3,  39,  38,  31,   1,  40,   0,   0, 0x00 },
     {     0, 0x63A7,  38,  38,  31,   1,  40,   0,   0, 0x00 },
     {     0, 0x6C14,  38,  38,  31,   2,  40,   0,   0, 0x00 },
     {   722, 0x6E29,  38,  38,  31,   2,  40,   0,   0, 0x00 },
@@ -80,6 +82,6 @@ touchgfx::GeneratedFont& getFont_STHUPO_TTF_40_4bpp();
 
 touchgfx::GeneratedFont& getFont_STHUPO_TTF_40_4bpp()
 {
-    static touchgfx::GeneratedFont STHUPO_TTF_40_4bpp(glyphs_STHUPO_TTF_40_4bpp, 33, 40, 7, 4, 1, 0, 1, unicodes_STHUPO_TTF_40_4bpp, kerning_STHUPO_TTF_40_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont STHUPO_TTF_40_4bpp(glyphs_STHUPO_TTF_40_4bpp, 35, 40, 7, 4, 1, 0, 1, unicodes_STHUPO_TTF_40_4bpp, kerning_STHUPO_TTF_40_4bpp, 63, 0, 0, 0);
     return STHUPO_TTF_40_4bpp;
 }

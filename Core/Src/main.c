@@ -118,7 +118,7 @@ int main(void)
   MX_USART6_UART_Init();
   MX_TIM14_Init();
   MX_TIM13_Init();
-//  MX_TouchGFX_Init();
+  MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start_IT(&htim13);
 	GT1151_Init();
